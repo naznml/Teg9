@@ -1,72 +1,68 @@
 <!doctype html><html lang="kk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Магистратура тесті</title><style>
 :root{--bg:#f6f7fb;--card:#fff;--txt:#172033;--mut:#667085;--line:#e6e8ef;--main:#4f46e5;--soft:#eef2ff;--green:#16a34a;--red:#dc2626;--shadow:0 16px 40px #10182814;--r:22px}*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--txt)}.wrap{max-width:1160px;margin:auto;padding:18px}.top{position:sticky;top:0;background:#ffffffdf;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:10}.nav{display:flex;gap:10px;justify-content:space-between;align-items:center;flex-wrap:wrap}.brand{font-weight:900}.links{display:flex;gap:8px;flex-wrap:wrap}.links a,.lang button{border:1px solid var(--line);background:white;border-radius:999px;padding:9px 12px;font-weight:750;text-decoration:none;color:var(--txt)}.lang button{cursor:pointer}.lang .on{background:var(--main);color:white}.hero{padding:42px 0 24px}.heroBox{border:1px solid var(--line);background:linear-gradient(135deg,#fff,#eef2ff);border-radius:30px;box-shadow:var(--shadow);padding:30px}h1{font-size:clamp(30px,5vw,54px);line-height:1;margin:10px 0;letter-spacing:-.04em}h2{font-size:clamp(24px,3vw,38px);margin:0 0 10px}p{line-height:1.65}.notice{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}.mini{background:white;border:1px solid var(--line);border-radius:18px;padding:14px}.btn{border:0;background:var(--main);color:white;border-radius:14px;padding:11px 15px;font-weight:850;cursor:pointer;text-decoration:none;display:inline-block}.btn2{background:#f3f4f6;color:#111;border:1px solid var(--line)}section{padding:28px 0}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:20px;margin:16px 0}.q{background:white;border:1px solid var(--line);border-radius:18px;padding:15px;margin:14px 0}.qt{font-weight:850;margin:0 0 12px}.op{display:block;background:#f9fafb;border:1px solid #eef0f3;border-radius:12px;padding:10px;margin:7px 0;cursor:pointer}.op:hover{background:var(--soft)}.exp{display:none;background:#f8fafc;border:1px solid #e8edf5;border-radius:14px;padding:12px;margin-top:10px}.q.show .exp{display:block}.q.ok{border-color:#86efac;background:#f0fdf4}.q.no{border-color:#fca5a5;background:#fff1f2}.res{font-weight:900;margin-top:12px}.steps{margin:0;padding-left:22px}.steps li{margin:7px 0}.svgbox{overflow:auto;text-align:center;background:#fbfdff;border:1px solid #eef2f7;border-radius:16px;padding:10px;margin:10px 0}.text{background:#fbfdff;border:1px solid #e8edf5;border-radius:16px;padding:15px;margin:12px 0;line-height:1.75}.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}.tab{border:1px solid var(--line);background:white;border-radius:14px;padding:10px;font-weight:850;cursor:pointer}.tab.on{background:var(--main);color:white}.tc{display:none}.tc.on{display:block}audio{width:100%}.vocab{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.vocab div{background:#f9fafb;border:1px solid var(--line);border-radius:14px;padding:10px}.table{border-collapse:collapse;margin:10px 0;max-width:560px;width:100%}.table td,.table th{border:1px solid #cbd5e1;padding:7px;text-align:center}.ru{display:none}body.rus .kk{display:none}body.rus .ru{display:initial}body.rus .rub{display:block}.rub{display:none}body.rus .kkb{display:none}.kkb{display:block}@media(max-width:720px){.notice,.vocab{grid-template-columns:1fr}.tabs{grid-template-columns:repeat(2,1fr)}}
 
-/* Language visibility fix */
-.ru, .ru-only, .ru-block { display: none; }
-.kk, .kz-only, .kz-block { display: initial; }
-body.rus .kk, body.rus .kz-only, body.rus .kz-block { display: none !important; }
-body.rus .ru, body.rus .ru-only, body.rus .ru-block { display: initial !important; }
-body.rus p.ru-block, body.rus div.ru-block, body.rus ol.ru-block { display: block !important; }
-body.rus span.ru, body.rus span.ru-only { display: inline !important; }
-body:not(.rus) p.kz-block, body:not(.rus) div.kz-block, body:not(.rus) ol.kz-block { display: block !important; }
-body:not(.rus) span.kk, body:not(.rus) span.kz-only { display: inline !important; }
-.lang button.active, .language button.active { background: var(--main, #4f46e5); color: #fff; }
 
-
-body.rus .ru.card, body.rus .ru.section, body.rus .ru.textblock { display:block !important; }
-body:not(.rus) .kk.card, body:not(.rus) .kk.section, body:not(.rus) .kk.textblock { display:block !important; }
-
-
-/* Fixed top navigation/menu */
-.topbar, header, .navbar, .nav {
-  position: sticky !important;
-  top: 0 !important;
-  z-index: 9999 !important;
+/* ===== NAZERKE FINAL CLEAN CSS ===== */
+:root{--final-main:#4f46e5}
+body{
+  padding-top:88px !important;
+  scroll-padding-top:100px !important;
 }
-body { scroll-padding-top: 92px; }
-.navlinks, .menu, .links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+header.top, .topbar{
+  position:fixed !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  width:100% !important;
+  z-index:999999 !important;
+  background:rgba(255,255,255,.98) !important;
+  backdrop-filter:blur(14px) !important;
+  border-bottom:1px solid #e5e7eb !important;
+  box-shadow:0 8px 24px rgba(15,23,42,.08) !important;
 }
-.navlinks a, .menu a, .links a {
-  white-space: nowrap;
+header.top .wrap, .topbar .wrap{
+  max-width:1180px !important;
+  margin:0 auto !important;
 }
+header.top .links, .topbar .navlinks, .navlinks, .links{
+  display:flex !important;
+  align-items:center !important;
+  flex-wrap:wrap !important;
+  gap:8px !important;
+}
+.lang button{
+  cursor:pointer !important;
+  border:1px solid #e5e7eb !important;
+  background:#fff !important;
+  border-radius:999px !important;
+  padding:9px 13px !important;
+  font-weight:850 !important;
+}
+.lang button.active{
+  background:var(--main,var(--final-main)) !important;
+  color:#fff !important;
+  border-color:var(--main,var(--final-main)) !important;
+}
+
+/* Default KZ only */
+.ru, .ru-only, .ru-block, .rub{display:none !important;}
+.kk, .kz-only, .kz-block, .kkb{display:initial !important;}
+div.kk, p.kk, section.kk, article.kk, .kz-block, .kkb{display:block !important;}
+ol.kz-block, ul.kz-block{display:block !important;}
+
+/* Russian mode: RU only */
+body.lang-ru .kk, body.lang-ru .kz-only, body.lang-ru .kz-block, body.lang-ru .kkb{display:none !important;}
+body.lang-ru .ru, body.lang-ru .ru-only{display:initial !important;}
+body.lang-ru div.ru, body.lang-ru p.ru, body.lang-ru section.ru, body.lang-ru article.ru, body.lang-ru .ru-block, body.lang-ru .rub{display:block !important;}
+body.lang-ru ol.ru-block, body.lang-ru ul.ru-block{display:block !important;}
+
 @media(max-width:760px){
-  body { scroll-padding-top: 135px; }
-  .topbar, header, .navbar, .nav { position: sticky !important; top: 0 !important; }
+  body{padding-top:136px !important; scroll-padding-top:146px !important;}
 }
-
-
-/* Language switch visibility */
-.ru, .ru-only, .ru-block { display:none; }
-.kk, .kz-only, .kz-block { display:initial; }
-body.rus .kk, body.rus .kz-only, body.rus .kz-block { display:none !important; }
-body.rus .ru, body.rus .ru-only, body.rus .ru-block { display:initial !important; }
-body.rus div.ru, body.rus p.ru, body.rus section.ru, body.rus .ru-block, body.rus ol.ru-block { display:block !important; }
-body:not(.rus) div.kk, body:not(.rus) p.kk, body:not(.rus) section.kk, body:not(.rus) .kz-block, body:not(.rus) ol.kz-block { display:block !important; }
-.lang button.active, .language button.active, [data-lang-btn].active { background: var(--main, #4f46e5); color:#fff; }
-
-
-/* FINAL FIX: language + fixed menu */
-.top{
-  position: sticky !important;
-  top: 0 !important;
-  z-index: 99999 !important;
-  background: rgba(255,255,255,.94) !important;
-  backdrop-filter: blur(12px) !important;
-}
-body{scroll-padding-top:110px}
-.ru, .ru-only, .ru-block, .rub{display:none !important}
-.kk, .kz-only, .kz-block, .kkb{display:initial !important}
-body.rus .kk, body.rus .kz-only, body.rus .kz-block, body.rus .kkb{display:none !important}
-body.rus .ru, body.rus .ru-only{display:initial !important}
-body.rus .ru-block, body.rus .rub{display:block !important}
-.lang button.on,.lang button.active{background:var(--main,#4f46e5)!important;color:#fff!important;border-color:var(--main,#4f46e5)!important}
 
 </style></head><body><header class="top"><div class="wrap nav"><div class="brand"><span class="kk">Магистратура тесті</span><span class="ru">Тест для магистратуры</span></div><div class="links"><a href="#critical"><span class="kk">Критикалық ойлау</span><span class="ru">Критическое мышление</span></a><a href="#analytical"><span class="kk">Аналитикалық ойлау</span><span class="ru">Аналитическое мышление</span></a><a href="#english"><span class="kk">Ағылшын тілі</span><span class="ru">Английский язык</span></a><span class="lang">
-<button class="on active" type="button" onclick="document.body.classList.remove('rus');document.body.classList.remove('ru');document.documentElement.lang='kk';this.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('on','active'));this.classList.add('on','active');">KZ</button>
-<button type="button" onclick="document.body.classList.add('rus');document.body.classList.add('ru');document.documentElement.lang='ru';this.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('on','active'));this.classList.add('on','active');">RU</button>
+<button type="button" class="active" data-lang="kk">KZ</button>
+<button type="button" data-lang="ru">RU</button>
 </span></div></div></header><main class="wrap"><section class="hero"><div class="heroBox"><h1><span class="kk">Магистратура тесті: ТГО + ағылшын тілі</span><span class="ru">Тест для магистратуры: критическое мышление, аналитическое мышление + английский язык</span></h1><p><span class="kk">Интерактивті дайындық: жауапты таңдаңыз, нәтижені көрсетіңіз, түсіндірмені қадам бойынша оқыңыз.</span><span class="ru">Интерактивная подготовка: выберите ответ, покажите результат и изучите пошаговое объяснение.</span></p><div class="notice"><div class="mini"><b><span class="kk">Тегін материал</span><span class="ru">Бесплатный материал</span></b><br><span class="kk">Бұл сайт тегін дайындыққа арналған. Материалды сатуға болмайды.</span><span class="ru">Этот сайт предназначен для бесплатной подготовки. Продавать материал нельзя.</span></div><div class="mini"><b>Telegram</b><br><span class="kk">Осындай форматтағы тегін тесттер мен материалдар Telegram-каналымда бар.</span><span class="ru">Бесплатные тесты и материалы в таком же формате есть в моём Telegram-канале.</span><br><br><a class="btn" href="https://t.me/+jtaSqR4E3CI2MjUy" target="_blank"><span class="kk">Telegram-каналға өту</span><span class="ru">Перейти в Telegram-канал</span></a></div></div></div></section><section id="critical"><h2><span class="kk">Критикалық ойлау</span><span class="ru">Критическое мышление</span></h2><p><span class="kk">№1–15: математика, логика, фигуралар, кестелер.</span><span class="ru">№1–15: математика, логика, фигуры, таблицы.</span></p><div class="card" data-test="critical"><h3>1–15</h3><div id="criticalQs"></div><button class="btn" onclick="check('critical')"><span class="kk">Нәтижені көрсету</span><span class="ru">Показать результат</span></button> <button class="btn btn2" onclick="resetT('critical')"><span class="kk">Қайта тапсыру</span><span class="ru">Пройти заново</span></button><div class="res"></div></div></section><section id="analytical"><h2><span class="kk">Аналитикалық ойлау</span><span class="ru">Аналитическое мышление</span></h2><p><span class="kk">№16–30: мәтінмен жұмыс. Бір мәтін бірнеше сұраққа қолданылады.</span><span class="ru">№16–30: работа с текстом. Один текст используется для нескольких вопросов.</span></p><div class="card" data-test="analytical"><h3>16–30</h3><div id="analyticalQs"></div><button class="btn" onclick="check('analytical')"><span class="kk">Нәтижені көрсету</span><span class="ru">Показать результат</span></button> <button class="btn btn2" onclick="resetT('analytical')"><span class="kk">Қайта тапсыру</span><span class="ru">Пройти заново</span></button><div class="res"></div></div></section><section id="english"><h2><span class="kk">Ағылшын тілі</span><span class="ru">Английский язык</span></h2><div id="englishBlock"></div></section>
 <section id="overall">
   <div class="card">
@@ -78,10 +74,10 @@ body.rus .ru-block, body.rus .rub{display:block !important}
 </section></main><script>
 
 function forceKZ(){
-  document.body.classList.remove('rus'); document.body.classList.remove('ru'); document.documentElement.lang='kk';
+  document.body.classList.remove('rus'); document.documentElement.lang='kk';
 }
 function forceRU(){
-  document.body.classList.add('rus'); document.body.classList.add('ru'); document.documentElement.lang='ru';
+  document.body.classList.add('rus'); document.documentElement.lang='ru';
 }
 function setLanguage(lang, btn){
   if(lang==='ru'||lang==='rus'){forceRU()}else{forceKZ()}
@@ -94,7 +90,7 @@ function lang(langValue, btn){setLanguage(langValue, btn)}
 function setLanguage(lang, btn){
   const isRu = (lang === 'ru' || lang === 'rus');
   document.body.classList.toggle('rus', isRu);
-  document.body.classList.toggle('ru', isRu);
+  
   document.documentElement.lang = isRu ? 'ru' : 'kk';
 
   document.querySelectorAll('.lang button, .language button, [data-lang-btn]').forEach(b => b.classList.remove('active'));
@@ -300,4 +296,29 @@ html+=`<div class="card"><h3><span class="kk">English бойынша нәтиж�
 document.getElementById('englishBlock').innerHTML=html
 }
 renderEnglish();
-</script></body></html>
+</script>
+<script id="nazerke-final-language-fix">
+(function(){
+  function setLanguage(lang){
+    var isRu = lang === "ru";
+    document.body.classList.toggle("lang-ru", isRu);
+    document.documentElement.lang = isRu ? "ru" : "kk";
+    document.querySelectorAll(".lang button").forEach(function(btn){
+      btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
+    });
+  }
+
+  window.setLanguage = setLanguage;
+  window.setLang = function(lang){ setLanguage(lang === "rus" ? "ru" : lang); };
+  window.lang = function(lang){ setLanguage(lang === "rus" ? "ru" : lang); };
+
+  document.addEventListener("DOMContentLoaded", function(){
+    document.querySelectorAll(".lang button").forEach(function(btn){
+      btn.onclick = function(){ setLanguage(btn.getAttribute("data-lang")); };
+    });
+    setLanguage("kk");
+  });
+})();
+</script>
+
+</body></html>
