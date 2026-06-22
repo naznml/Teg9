@@ -1,5 +1,52 @@
 <!doctype html><html lang="kk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Магистратура тесті</title><style>
 :root{--bg:#f6f7fb;--card:#fff;--txt:#172033;--mut:#667085;--line:#e6e8ef;--main:#4f46e5;--soft:#eef2ff;--green:#16a34a;--red:#dc2626;--shadow:0 16px 40px #10182814;--r:22px}*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--txt)}.wrap{max-width:1160px;margin:auto;padding:18px}.top{position:sticky;top:0;background:#ffffffdf;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:10}.nav{display:flex;gap:10px;justify-content:space-between;align-items:center;flex-wrap:wrap}.brand{font-weight:900}.links{display:flex;gap:8px;flex-wrap:wrap}.links a,.lang button{border:1px solid var(--line);background:white;border-radius:999px;padding:9px 12px;font-weight:750;text-decoration:none;color:var(--txt)}.lang button{cursor:pointer}.lang .on{background:var(--main);color:white}.hero{padding:42px 0 24px}.heroBox{border:1px solid var(--line);background:linear-gradient(135deg,#fff,#eef2ff);border-radius:30px;box-shadow:var(--shadow);padding:30px}h1{font-size:clamp(30px,5vw,54px);line-height:1;margin:10px 0;letter-spacing:-.04em}h2{font-size:clamp(24px,3vw,38px);margin:0 0 10px}p{line-height:1.65}.notice{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}.mini{background:white;border:1px solid var(--line);border-radius:18px;padding:14px}.btn{border:0;background:var(--main);color:white;border-radius:14px;padding:11px 15px;font-weight:850;cursor:pointer;text-decoration:none;display:inline-block}.btn2{background:#f3f4f6;color:#111;border:1px solid var(--line)}section{padding:28px 0}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:20px;margin:16px 0}.q{background:white;border:1px solid var(--line);border-radius:18px;padding:15px;margin:14px 0}.qt{font-weight:850;margin:0 0 12px}.op{display:block;background:#f9fafb;border:1px solid #eef0f3;border-radius:12px;padding:10px;margin:7px 0;cursor:pointer}.op:hover{background:var(--soft)}.exp{display:none;background:#f8fafc;border:1px solid #e8edf5;border-radius:14px;padding:12px;margin-top:10px}.q.show .exp{display:block}.q.ok{border-color:#86efac;background:#f0fdf4}.q.no{border-color:#fca5a5;background:#fff1f2}.res{font-weight:900;margin-top:12px}.steps{margin:0;padding-left:22px}.steps li{margin:7px 0}.svgbox{overflow:auto;text-align:center;background:#fbfdff;border:1px solid #eef2f7;border-radius:16px;padding:10px;margin:10px 0}.text{background:#fbfdff;border:1px solid #e8edf5;border-radius:16px;padding:15px;margin:12px 0;line-height:1.75}.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}.tab{border:1px solid var(--line);background:white;border-radius:14px;padding:10px;font-weight:850;cursor:pointer}.tab.on{background:var(--main);color:white}.tc{display:none}.tc.on{display:block}audio{width:100%}.vocab{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.vocab div{background:#f9fafb;border:1px solid var(--line);border-radius:14px;padding:10px}.table{border-collapse:collapse;margin:10px 0;max-width:560px;width:100%}.table td,.table th{border:1px solid #cbd5e1;padding:7px;text-align:center}.ru{display:none}body.rus .kk{display:none}body.rus .ru{display:initial}body.rus .rub{display:block}.rub{display:none}body.rus .kkb{display:none}.kkb{display:block}@media(max-width:720px){.notice,.vocab{grid-template-columns:1fr}.tabs{grid-template-columns:repeat(2,1fr)}}
+
+/* Language visibility fix */
+.ru, .ru-only, .ru-block { display: none; }
+.kk, .kz-only, .kz-block { display: initial; }
+body.rus .kk, body.rus .kz-only, body.rus .kz-block { display: none !important; }
+body.rus .ru, body.rus .ru-only, body.rus .ru-block { display: initial !important; }
+body.rus p.ru-block, body.rus div.ru-block, body.rus ol.ru-block { display: block !important; }
+body.rus span.ru, body.rus span.ru-only { display: inline !important; }
+body:not(.rus) p.kz-block, body:not(.rus) div.kz-block, body:not(.rus) ol.kz-block { display: block !important; }
+body:not(.rus) span.kk, body:not(.rus) span.kz-only { display: inline !important; }
+.lang button.active, .language button.active { background: var(--main, #4f46e5); color: #fff; }
+
+
+body.rus .ru.card, body.rus .ru.section, body.rus .ru.textblock { display:block !important; }
+body:not(.rus) .kk.card, body:not(.rus) .kk.section, body:not(.rus) .kk.textblock { display:block !important; }
+
+
+/* Fixed top navigation/menu */
+.topbar, header, .navbar, .nav {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 9999 !important;
+}
+body { scroll-padding-top: 92px; }
+.navlinks, .menu, .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.navlinks a, .menu a, .links a {
+  white-space: nowrap;
+}
+@media(max-width:760px){
+  body { scroll-padding-top: 135px; }
+  .topbar, header, .navbar, .nav { position: sticky !important; top: 0 !important; }
+}
+
+
+/* Language switch visibility */
+.ru, .ru-only, .ru-block { display:none; }
+.kk, .kz-only, .kz-block { display:initial; }
+body.rus .kk, body.rus .kz-only, body.rus .kz-block { display:none !important; }
+body.rus .ru, body.rus .ru-only, body.rus .ru-block { display:initial !important; }
+body.rus div.ru, body.rus p.ru, body.rus section.ru, body.rus .ru-block, body.rus ol.ru-block { display:block !important; }
+body:not(.rus) div.kk, body:not(.rus) p.kk, body:not(.rus) section.kk, body:not(.rus) .kz-block, body:not(.rus) ol.kz-block { display:block !important; }
+.lang button.active, .language button.active, [data-lang-btn].active { background: var(--main, #4f46e5); color:#fff; }
+
 </style></head><body><header class="top"><div class="wrap nav"><div class="brand"><span class="kk">Магистратура тесті</span><span class="ru">Тест для магистратуры</span></div><div class="links"><a href="#critical"><span class="kk">Критикалық ойлау</span><span class="ru">Критическое мышление</span></a><a href="#analytical"><span class="kk">Аналитикалық ойлау</span><span class="ru">Аналитическое мышление</span></a><a href="#english"><span class="kk">Ағылшын тілі</span><span class="ru">Английский язык</span></a><span class="lang"><button class="on" onclick="lang('kk',this)">KZ</button><button onclick="lang('ru',this)">RU</button></span></div></div></header><main class="wrap"><section class="hero"><div class="heroBox"><h1><span class="kk">Магистратура тесті: ТГО + ағылшын тілі</span><span class="ru">Тест для магистратуры: критическое мышление, аналитическое мышление + английский язык</span></h1><p><span class="kk">Интерактивті дайындық: жауапты таңдаңыз, нәтижені көрсетіңіз, түсіндірмені қадам бойынша оқыңыз.</span><span class="ru">Интерактивная подготовка: выберите ответ, покажите результат и изучите пошаговое объяснение.</span></p><div class="notice"><div class="mini"><b><span class="kk">Тегін материал</span><span class="ru">Бесплатный материал</span></b><br><span class="kk">Бұл сайт тегін дайындыққа арналған. Материалды сатуға болмайды.</span><span class="ru">Этот сайт предназначен для бесплатной подготовки. Продавать материал нельзя.</span></div><div class="mini"><b>Telegram</b><br><span class="kk">Осындай форматтағы тегін тесттер мен материалдар Telegram-каналымда бар.</span><span class="ru">Бесплатные тесты и материалы в таком же формате есть в моём Telegram-канале.</span><br><br><a class="btn" href="https://t.me/+jtaSqR4E3CI2MjUy" target="_blank"><span class="kk">Telegram-каналға өту</span><span class="ru">Перейти в Telegram-канал</span></a></div></div></div></section><section id="critical"><h2><span class="kk">Критикалық ойлау</span><span class="ru">Критическое мышление</span></h2><p><span class="kk">№1–15: математика, логика, фигуралар, кестелер.</span><span class="ru">№1–15: математика, логика, фигуры, таблицы.</span></p><div class="card" data-test="critical"><h3>1–15</h3><div id="criticalQs"></div><button class="btn" onclick="check('critical')"><span class="kk">Нәтижені көрсету</span><span class="ru">Показать результат</span></button> <button class="btn btn2" onclick="resetT('critical')"><span class="kk">Қайта тапсыру</span><span class="ru">Пройти заново</span></button><div class="res"></div></div></section><section id="analytical"><h2><span class="kk">Аналитикалық ойлау</span><span class="ru">Аналитическое мышление</span></h2><p><span class="kk">№16–30: мәтінмен жұмыс. Бір мәтін бірнеше сұраққа қолданылады.</span><span class="ru">№16–30: работа с текстом. Один текст используется для нескольких вопросов.</span></p><div class="card" data-test="analytical"><h3>16–30</h3><div id="analyticalQs"></div><button class="btn" onclick="check('analytical')"><span class="kk">Нәтижені көрсету</span><span class="ru">Показать результат</span></button> <button class="btn btn2" onclick="resetT('analytical')"><span class="kk">Қайта тапсыру</span><span class="ru">Пройти заново</span></button><div class="res"></div></div></section><section id="english"><h2><span class="kk">Ағылшын тілі</span><span class="ru">Английский язык</span></h2><div id="englishBlock"></div></section>
 <section id="overall">
   <div class="card">
@@ -9,7 +56,30 @@
     <div id="totalRes" class="res"></div>
   </div>
 </section></main><script>
-function lang(l,b){document.body.classList.toggle('rus',l==='ru');document.querySelectorAll('.lang button').forEach(x=>x.classList.remove('on'));b.classList.add('on')}function tab(e,id){let c=e.target.closest('.card');c.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));c.querySelectorAll('.tc').forEach(t=>t.classList.remove('on'));e.target.classList.add('on');document.getElementById(id).classList.add('on')}function q(name,n,t,opts,a,kz,ru,fig=''){let L='ABCDE';return `<div class="q" data-correct="${a}"><p class="qt">${n}. ${t}</p>${fig}<div>${opts.map((o,i)=>`<label class="op"><input type="radio" name="${name}${n}" value="${L[i]}"> ${L[i]}) ${o}</label>`).join('')}</div><div class="exp"><ol class="steps kkb">${kz.map(x=>`<li>${x}</li>`).join('')}</ol><ol class="steps rub">${ru.map(x=>`<li>${x}</li>`).join('')}</ol></div></div>`}function scoreIn(container){let qs=container.querySelectorAll('.q'),s=0;qs.forEach(q=>{let v=q.querySelector('input:checked');if(v&&v.value===q.dataset.correct)s++});return {s:s,t:qs.length}}
+
+function setLanguage(lang, btn){
+  const isRu = (lang === 'ru' || lang === 'rus');
+  document.body.classList.toggle('rus', isRu);
+  document.body.classList.toggle('ru', isRu);
+  document.documentElement.lang = isRu ? 'ru' : 'kk';
+
+  document.querySelectorAll('.lang button, .language button, [data-lang-btn]').forEach(b => b.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  else {
+    const target = document.querySelector(isRu ? '[data-lang-btn="ru"]' : '[data-lang-btn="kk"]');
+    if(target) target.classList.add('active');
+  }
+
+  // Re-render score labels if they are already visible
+  if (document.getElementById('englishRes') && document.getElementById('englishRes').textContent.trim()) {
+    checkEnglish();
+  }
+  if (document.getElementById('totalRes') && document.getElementById('totalRes').textContent.trim()) {
+    checkAll();
+  }
+}
+
+function lang(x){ setLanguage(x); }function tab(e,id){let c=e.target.closest('.card');c.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));c.querySelectorAll('.tc').forEach(t=>t.classList.remove('on'));e.target.classList.add('on');document.getElementById(id).classList.add('on')}function q(name,n,t,opts,a,kz,ru,fig=''){let L='ABCDE';return `<div class="q" data-correct="${a}"><p class="qt">${n}. ${t}</p>${fig}<div>${opts.map((o,i)=>`<label class="op"><input type="radio" name="${name}${n}" value="${L[i]}"> ${L[i]}) ${o}</label>`).join('')}</div><div class="exp"><ol class="steps kkb">${kz.map(x=>`<li>${x}</li>`).join('')}</ol><ol class="steps rub">${ru.map(x=>`<li>${x}</li>`).join('')}</ol></div></div>`}function scoreIn(container){let qs=container.querySelectorAll('.q'),s=0;qs.forEach(q=>{let v=q.querySelector('input:checked');if(v&&v.value===q.dataset.correct)s++});return {s:s,t:qs.length}}
 function applyCheck(container){let qs=container.querySelectorAll('.q'),s=0;qs.forEach(q=>{let v=q.querySelector('input:checked');let ok=v&&v.value===q.dataset.correct;q.classList.remove('ok','no');q.classList.add('show');q.classList.toggle('ok',ok);q.classList.toggle('no',!ok);if(ok)s++});return {s:s,t:qs.length}}
 function check(id){let c=document.querySelector(`[data-test="${id}"]`);let r=applyCheck(c);c.querySelector('.res').textContent=(document.body.classList.contains('rus')?'Результат: ':'Нәтиже: ')+r.s+' / '+r.t}
 function resetT(id){let c=document.querySelector(`[data-test="${id}"]`);c.querySelectorAll('.q').forEach(q=>{q.classList.remove('show','ok','no');q.querySelectorAll('input').forEach(i=>i.checked=false)});c.querySelector('.res').textContent='';let e=document.getElementById('englishRes');if(e)e.textContent='';let t=document.getElementById('totalRes');if(t)t.textContent=''}
