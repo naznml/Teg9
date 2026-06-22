@@ -1,69 +1,100 @@
 <!doctype html><html lang="kk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Магистратура тесті</title><style>
 :root{--bg:#f6f7fb;--card:#fff;--txt:#172033;--mut:#667085;--line:#e6e8ef;--main:#4f46e5;--soft:#eef2ff;--green:#16a34a;--red:#dc2626;--shadow:0 16px 40px #10182814;--r:22px}*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--txt)}.wrap{max-width:1160px;margin:auto;padding:18px}.top{position:sticky;top:0;background:#ffffffdf;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:10}.nav{display:flex;gap:10px;justify-content:space-between;align-items:center;flex-wrap:wrap}.brand{font-weight:900}.links{display:flex;gap:8px;flex-wrap:wrap}.links a,.lang button{border:1px solid var(--line);background:white;border-radius:999px;padding:9px 12px;font-weight:750;text-decoration:none;color:var(--txt)}.lang button{cursor:pointer}.lang .on{background:var(--main);color:white}.hero{padding:42px 0 24px}.heroBox{border:1px solid var(--line);background:linear-gradient(135deg,#fff,#eef2ff);border-radius:30px;box-shadow:var(--shadow);padding:30px}h1{font-size:clamp(30px,5vw,54px);line-height:1;margin:10px 0;letter-spacing:-.04em}h2{font-size:clamp(24px,3vw,38px);margin:0 0 10px}p{line-height:1.65}.notice{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}.mini{background:white;border:1px solid var(--line);border-radius:18px;padding:14px}.btn{border:0;background:var(--main);color:white;border-radius:14px;padding:11px 15px;font-weight:850;cursor:pointer;text-decoration:none;display:inline-block}.btn2{background:#f3f4f6;color:#111;border:1px solid var(--line)}section{padding:28px 0}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:20px;margin:16px 0}.q{background:white;border:1px solid var(--line);border-radius:18px;padding:15px;margin:14px 0}.qt{font-weight:850;margin:0 0 12px}.op{display:block;background:#f9fafb;border:1px solid #eef0f3;border-radius:12px;padding:10px;margin:7px 0;cursor:pointer}.op:hover{background:var(--soft)}.exp{display:none;background:#f8fafc;border:1px solid #e8edf5;border-radius:14px;padding:12px;margin-top:10px}.q.show .exp{display:block}.q.ok{border-color:#86efac;background:#f0fdf4}.q.no{border-color:#fca5a5;background:#fff1f2}.res{font-weight:900;margin-top:12px}.steps{margin:0;padding-left:22px}.steps li{margin:7px 0}.svgbox{overflow:auto;text-align:center;background:#fbfdff;border:1px solid #eef2f7;border-radius:16px;padding:10px;margin:10px 0}.text{background:#fbfdff;border:1px solid #e8edf5;border-radius:16px;padding:15px;margin:12px 0;line-height:1.75}.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}.tab{border:1px solid var(--line);background:white;border-radius:14px;padding:10px;font-weight:850;cursor:pointer}.tab.on{background:var(--main);color:white}.tc{display:none}.tc.on{display:block}audio{width:100%}.vocab{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.vocab div{background:#f9fafb;border:1px solid var(--line);border-radius:14px;padding:10px}.table{border-collapse:collapse;margin:10px 0;max-width:560px;width:100%}.table td,.table th{border:1px solid #cbd5e1;padding:7px;text-align:center}.ru{display:none}body.rus .kk{display:none}body.rus .ru{display:initial}body.rus .rub{display:block}.rub{display:none}body.rus .kkb{display:none}.kkb{display:block}@media(max-width:720px){.notice,.vocab{grid-template-columns:1fr}.tabs{grid-template-columns:repeat(2,1fr)}}
 
-
-/* ===== NAZERKE FINAL CLEAN CSS ===== */
-:root{--final-main:#4f46e5}
-body{
-  padding-top:88px !important;
-  scroll-padding-top:100px !important;
+/* ===== FINAL: ONLY ONE LANGUAGE + FIXED TOP MENU ===== */
+body{padding-top:96px!important;scroll-padding-top:112px!important}
+header.top,.topbar{
+  position:fixed!important;top:0!important;left:0!important;right:0!important;width:100%!important;
+  z-index:999999!important;background:rgba(255,255,255,.98)!important;
+  border-bottom:1px solid #e5e7eb!important;box-shadow:0 8px 24px rgba(15,23,42,.08)!important;
 }
-header.top, .topbar{
+header.top .wrap,.topbar .wrap{max-width:1160px!important;margin:0 auto!important}
+.links,.navlinks{display:flex!important;align-items:center!important;flex-wrap:wrap!important;gap:8px!important}
+.ru,.rub{display:none!important}.kk,.kkb{display:initial!important}.kkb{display:block!important}
+body.rus .kk,body.rus .kkb{display:none!important}
+body.rus .ru{display:initial!important}
+body.rus .rub{display:block!important}
+.lang button.active,.lang button.on{background:var(--main,#4f46e5)!important;color:white!important;border-color:var(--main,#4f46e5)!important}
+@media(max-width:720px){body{padding-top:135px!important;scroll-padding-top:145px!important}}
+
+
+/* ===== FINAL FIX: TOP SUBJECT CARDS MUST NOT MOVE ===== */
+body{
+  padding-top:118px !important;
+  scroll-padding-top:130px !important;
+}
+header.top{
   position:fixed !important;
   top:0 !important;
   left:0 !important;
   right:0 !important;
   width:100% !important;
-  z-index:999999 !important;
-  background:rgba(255,255,255,.98) !important;
-  backdrop-filter:blur(14px) !important;
+  z-index:2147483647 !important;
+  background:rgba(255,255,255,.99) !important;
   border-bottom:1px solid #e5e7eb !important;
-  box-shadow:0 8px 24px rgba(15,23,42,.08) !important;
+  box-shadow:0 10px 30px rgba(15,23,42,.12) !important;
 }
-header.top .wrap, .topbar .wrap{
-  max-width:1180px !important;
+header.top .wrap.nav{
+  max-width:1160px !important;
   margin:0 auto !important;
-}
-header.top .links, .topbar .navlinks, .navlinks, .links{
+  padding:10px 16px !important;
   display:flex !important;
   align-items:center !important;
-  flex-wrap:wrap !important;
+  justify-content:space-between !important;
+  gap:10px !important;
+}
+header.top .links{
+  display:flex !important;
+  align-items:center !important;
   gap:8px !important;
+  flex-wrap:wrap !important;
 }
-.lang button{
-  cursor:pointer !important;
-  border:1px solid #e5e7eb !important;
-  background:#fff !important;
-  border-radius:999px !important;
-  padding:9px 13px !important;
+header.top .links > a{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-height:42px !important;
+  padding:10px 14px !important;
+  border-radius:16px !important;
+  background:#ffffff !important;
+  border:1px solid #dbe3ff !important;
+  box-shadow:0 6px 18px rgba(79,70,229,.10) !important;
   font-weight:850 !important;
+  text-decoration:none !important;
+  color:#172033 !important;
+  white-space:nowrap !important;
 }
-.lang button.active{
-  background:var(--main,var(--final-main)) !important;
-  color:#fff !important;
-  border-color:var(--main,var(--final-main)) !important;
+header.top .links > a:hover{
+  background:#eef2ff !important;
+  border-color:#bfc9ff !important;
 }
-
-/* Default KZ only */
-.ru, .ru-only, .ru-block, .rub{display:none !important;}
-.kk, .kz-only, .kz-block, .kkb{display:initial !important;}
-div.kk, p.kk, section.kk, article.kk, .kz-block, .kkb{display:block !important;}
-ol.kz-block, ul.kz-block{display:block !important;}
-
-/* Russian mode: RU only */
-body.lang-ru .kk, body.lang-ru .kz-only, body.lang-ru .kz-block, body.lang-ru .kkb{display:none !important;}
-body.lang-ru .ru, body.lang-ru .ru-only{display:initial !important;}
-body.lang-ru div.ru, body.lang-ru p.ru, body.lang-ru section.ru, body.lang-ru article.ru, body.lang-ru .ru-block, body.lang-ru .rub{display:block !important;}
-body.lang-ru ol.ru-block, body.lang-ru ul.ru-block{display:block !important;}
-
+header.top .lang{
+  display:inline-flex !important;
+  gap:6px !important;
+}
+header.top .lang button{
+  min-height:42px !important;
+  padding:10px 13px !important;
+  border-radius:16px !important;
+  font-weight:900 !important;
+}
 @media(max-width:760px){
-  body{padding-top:136px !important; scroll-padding-top:146px !important;}
+  body{
+    padding-top:168px !important;
+    scroll-padding-top:180px !important;
+  }
+  header.top .wrap.nav{
+    align-items:flex-start !important;
+    flex-direction:column !important;
+  }
+  header.top .links > a{
+    min-height:38px !important;
+    padding:8px 10px !important;
+    font-size:13px !important;
+  }
 }
 
-</style></head><body><header class="top"><div class="wrap nav"><div class="brand"><span class="kk">Магистратура тесті</span><span class="ru">Тест для магистратуры</span></div><div class="links"><a href="#critical"><span class="kk">Критикалық ойлау</span><span class="ru">Критическое мышление</span></a><a href="#analytical"><span class="kk">Аналитикалық ойлау</span><span class="ru">Аналитическое мышление</span></a><a href="#english"><span class="kk">Ағылшын тілі</span><span class="ru">Английский язык</span></a><span class="lang">
-<button type="button" class="active" data-lang="kk">KZ</button>
-<button type="button" data-lang="ru">RU</button>
-</span></div></div></header><main class="wrap"><section class="hero"><div class="heroBox"><h1><span class="kk">Магистратура тесті: ТГО + ағылшын тілі</span><span class="ru">Тест для магистратуры: критическое мышление, аналитическое мышление + английский язык</span></h1><p><span class="kk">Интерактивті дайындық: жауапты таңдаңыз, нәтижені көрсетіңіз, түсіндірмені қадам бойынша оқыңыз.</span><span class="ru">Интерактивная подготовка: выберите ответ, покажите результат и изучите пошаговое объяснение.</span></p><div class="notice"><div class="mini"><b><span class="kk">Тегін материал</span><span class="ru">Бесплатный материал</span></b><br><span class="kk">Бұл сайт тегін дайындыққа арналған. Материалды сатуға болмайды.</span><span class="ru">Этот сайт предназначен для бесплатной подготовки. Продавать материал нельзя.</span></div><div class="mini"><b>Telegram</b><br><span class="kk">Осындай форматтағы тегін тесттер мен материалдар Telegram-каналымда бар.</span><span class="ru">Бесплатные тесты и материалы в таком же формате есть в моём Telegram-канале.</span><br><br><a class="btn" href="https://t.me/+jtaSqR4E3CI2MjUy" target="_blank"><span class="kk">Telegram-каналға өту</span><span class="ru">Перейти в Telegram-канал</span></a></div></div></div></section><section id="critical"><h2><span class="kk">Критикалық ойлау</span><span class="ru">Критическое мышление</span></h2><p><span class="kk">№1–15: математика, логика, фигуралар, кестелер.</span><span class="ru">№1–15: математика, логика, фигуры, таблицы.</span></p><div class="card" data-test="critical"><h3>1–15</h3><div id="criticalQs"></div><button class="btn" onclick="check('critical')"><span class="kk">Нәтижені көрсету</span><span class="ru">Показать результат</span></button> <button class="btn btn2" onclick="resetT('critical')"><span class="kk">Қайта тапсыру</span><span class="ru">Пройти заново</span></button><div class="res"></div></div></section><section id="analytical"><h2><span class="kk">Аналитикалық ойлау</span><span class="ru">Аналитическое мышление</span></h2><p><span class="kk">№16–30: мәтінмен жұмыс. Бір мәтін бірнеше сұраққа қолданылады.</span><span class="ru">№16–30: работа с текстом. Один текст используется для нескольких вопросов.</span></p><div class="card" data-test="analytical"><h3>16–30</h3><div id="analyticalQs"></div><button class="btn" onclick="check('analytical')"><span class="kk">Нәтижені көрсету</span><span class="ru">Показать результат</span></button> <button class="btn btn2" onclick="resetT('analytical')"><span class="kk">Қайта тапсыру</span><span class="ru">Пройти заново</span></button><div class="res"></div></div></section><section id="english"><h2><span class="kk">Ағылшын тілі</span><span class="ru">Английский язык</span></h2><div id="englishBlock"></div></section>
+</style></head><body><header class="top"><div class="wrap nav"><div class="brand"><span class="kk">Магистратура тесті</span><span class="ru">Тест для магистратуры</span></div><div class="links"><a href="#critical"><span class="kk">Критикалық ойлау</span><span class="ru">Критическое мышление</span></a><a href="#analytical"><span class="kk">Аналитикалық ойлау</span><span class="ru">Аналитическое мышление</span></a><a href="#english"><span class="kk">Ағылшын тілі</span><span class="ru">Английский язык</span></a><span class="lang"><button type="button" class="on active" data-lang="kk">KZ</button><button type="button" data-lang="ru">RU</button></span></div></div></header><main class="wrap"><section class="hero"><div class="heroBox"><h1><span class="kk">Магистратура тесті: ТГО + ағылшын тілі</span><span class="ru">Тест для магистратуры: критическое мышление, аналитическое мышление + английский язык</span></h1><p><span class="kk">Интерактивті дайындық: жауапты таңдаңыз, нәтижені көрсетіңіз, түсіндірмені қадам бойынша оқыңыз.</span><span class="ru">Интерактивная подготовка: выберите ответ, покажите результат и изучите пошаговое объяснение.</span></p><div class="notice"><div class="mini"><b><span class="kk">Тегін материал</span><span class="ru">Бесплатный материал</span></b><br><span class="kk">Бұл сайт тегін дайындыққа арналған. Материалды сатуға болмайды.</span><span class="ru">Этот сайт предназначен для бесплатной подготовки. Продавать материал нельзя.</span></div><div class="mini"><b>Telegram</b><br><span class="kk">Осындай форматтағы тегін тесттер мен материалдар Telegram-каналымда бар.</span><span class="ru">Бесплатные тесты и материалы в таком же формате есть в моём Telegram-канале.</span><br><br><a class="btn" href="https://t.me/+jtaSqR4E3CI2MjUy" target="_blank"><span class="kk">Telegram-каналға өту</span><span class="ru">Перейти в Telegram-канал</span></a></div></div></div></section><section id="critical"><h2><span class="kk">Критикалық ойлау</span><span class="ru">Критическое мышление</span></h2><p><span class="kk">№1–15: математика, логика, фигуралар, кестелер.</span><span class="ru">№1–15: математика, логика, фигуры, таблицы.</span></p><div class="card" data-test="critical"><h3>1–15</h3><div id="criticalQs"></div><button class="btn" onclick="check('critical')"><span class="kk">Нәтижені көрсету</span><span class="ru">Показать результат</span></button> <button class="btn btn2" onclick="resetT('critical')"><span class="kk">Қайта тапсыру</span><span class="ru">Пройти заново</span></button><div class="res"></div></div></section><section id="analytical"><h2><span class="kk">Аналитикалық ойлау</span><span class="ru">Аналитическое мышление</span></h2><p><span class="kk">№16–30: мәтінмен жұмыс. Бір мәтін бірнеше сұраққа қолданылады.</span><span class="ru">№16–30: работа с текстом. Один текст используется для нескольких вопросов.</span></p><div class="card" data-test="analytical"><h3>16–30</h3><div id="analyticalQs"></div><button class="btn" onclick="check('analytical')"><span class="kk">Нәтижені көрсету</span><span class="ru">Показать результат</span></button> <button class="btn btn2" onclick="resetT('analytical')"><span class="kk">Қайта тапсыру</span><span class="ru">Пройти заново</span></button><div class="res"></div></div></section><section id="english"><h2><span class="kk">Ағылшын тілі</span><span class="ru">Английский язык</span></h2><div id="englishBlock"></div></section>
 <section id="overall">
   <div class="card">
     <h2><span class="kk">Жалпы нәтиже</span><span class="ru">Общий результат</span></h2>
@@ -72,44 +103,7 @@ body.lang-ru ol.ru-block, body.lang-ru ul.ru-block{display:block !important;}
     <div id="totalRes" class="res"></div>
   </div>
 </section></main><script>
-
-function forceKZ(){
-  document.body.classList.remove('rus'); document.documentElement.lang='kk';
-}
-function forceRU(){
-  document.body.classList.add('rus'); document.documentElement.lang='ru';
-}
-function setLanguage(lang, btn){
-  if(lang==='ru'||lang==='rus'){forceRU()}else{forceKZ()}
-  if(btn){btn.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('on','active'));btn.classList.add('on','active')}
-}
-function setLang(lang, btn){setLanguage(lang, btn)}
-function lang(langValue, btn){setLanguage(langValue, btn)}
-
-
-function setLanguage(lang, btn){
-  const isRu = (lang === 'ru' || lang === 'rus');
-  document.body.classList.toggle('rus', isRu);
-  
-  document.documentElement.lang = isRu ? 'ru' : 'kk';
-
-  document.querySelectorAll('.lang button, .language button, [data-lang-btn]').forEach(b => b.classList.remove('active'));
-  if(btn) btn.classList.add('active');
-  else {
-    const target = document.querySelector(isRu ? '[data-lang-btn="ru"]' : '[data-lang-btn="kk"]');
-    if(target) target.classList.add('active');
-  }
-
-  // Re-render score labels if they are already visible
-  if (document.getElementById('englishRes') && document.getElementById('englishRes').textContent.trim()) {
-    checkEnglish();
-  }
-  if (document.getElementById('totalRes') && document.getElementById('totalRes').textContent.trim()) {
-    checkAll();
-  }
-}
-
-function lang(x,btn){ setLanguage(x,btn); }function tab(e,id){let c=e.target.closest('.card');c.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));c.querySelectorAll('.tc').forEach(t=>t.classList.remove('on'));e.target.classList.add('on');document.getElementById(id).classList.add('on')}function q(name,n,t,opts,a,kz,ru,fig=''){let L='ABCDE';function ot(o){return Array.isArray(o)?`<span class="kk">${o[0]}</span><span class="ru">${o[1]}</span>`:o}return `<div class="q" data-correct="${a}"><p class="qt">${n}. ${t}</p>${fig}<div>${opts.map((o,i)=>`<label class="op"><input type="radio" name="${name}${n}" value="${L[i]}"> ${L[i]}) ${ot(o)}</label>`).join('')}</div><div class="exp"><ol class="steps kkb">${kz.map(x=>`<li>${x}</li>`).join('')}</ol><ol class="steps rub">${ru.map(x=>`<li>${x}</li>`).join('')}</ol></div></div>`}function scoreIn(container){let qs=container.querySelectorAll('.q'),s=0;qs.forEach(q=>{let v=q.querySelector('input:checked');if(v&&v.value===q.dataset.correct)s++});return {s:s,t:qs.length}}
+function lang(l,b){document.body.classList.toggle('rus',l==='ru');document.querySelectorAll('.lang button').forEach(x=>x.classList.remove('on'));b.classList.add('on')}function tab(e,id){let c=e.target.closest('.card');c.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));c.querySelectorAll('.tc').forEach(t=>t.classList.remove('on'));e.target.classList.add('on');document.getElementById(id).classList.add('on')}function q(name,n,t,opts,a,kz,ru,fig=''){let L='ABCDE';function opt(o){return Array.isArray(o)?`<span class="kk">${o[0]}</span><span class="ru">${o[1]}</span>`:o}return `<div class="q" data-correct="${a}"><p class="qt">${n}. ${t}</p>${fig}<div>${opts.map((o,i)=>`<label class="op"><input type="radio" name="${name}${n}" value="${L[i]}"> ${L[i]}) ${opt(o)}</label>`).join('')}</div><div class="exp"><ol class="steps kkb">${kz.map(x=>`<li>${x}</li>`).join('')}</ol><ol class="steps rub">${ru.map(x=>`<li>${x}</li>`).join('')}</ol></div></div>`}function scoreIn(container){let qs=container.querySelectorAll('.q'),s=0;qs.forEach(q=>{let v=q.querySelector('input:checked');if(v&&v.value===q.dataset.correct)s++});return {s:s,t:qs.length}}
 function applyCheck(container){let qs=container.querySelectorAll('.q'),s=0;qs.forEach(q=>{let v=q.querySelector('input:checked');let ok=v&&v.value===q.dataset.correct;q.classList.remove('ok','no');q.classList.add('show');q.classList.toggle('ok',ok);q.classList.toggle('no',!ok);if(ok)s++});return {s:s,t:qs.length}}
 function check(id){let c=document.querySelector(`[data-test="${id}"]`);let r=applyCheck(c);c.querySelector('.res').textContent=(document.body.classList.contains('rus')?'Результат: ':'Нәтиже: ')+r.s+' / '+r.t}
 function resetT(id){let c=document.querySelector(`[data-test="${id}"]`);c.querySelectorAll('.q').forEach(q=>{q.classList.remove('show','ok','no');q.querySelectorAll('input').forEach(i=>i.checked=false)});c.querySelector('.res').textContent='';let e=document.getElementById('englishRes');if(e)e.textContent='';let t=document.getElementById('totalRes');if(t)t.textContent=''}
@@ -124,11 +118,11 @@ let C=[
 [5,'<span class="kk">Бір шаршының ауданы 4 см² болса, фигураның ауданын табыңыз.</span><span class="ru">Если площадь одного квадрата 4 см², найдите площадь фигуры.</span>',['84 см²','80 см²','90 см²','88 см²','76 см²'],'A',['Фигурадағы кішкентай шаршылар саны 21.','Бір шаршының ауданы 4 см².','Жалпы аудан: 21×4=84 см².'],['В фигуре 21 маленький квадрат.','Площадь одного квадрата 4 см².','Общая площадь: 21×4=84 см².'],figs.f5],
 [6,'<span class="kk">0,9 < a < 1,2 болса, шаршы периметрі қай аралықта?</span><span class="ru">Если 0,9 < a < 1,2, в каком промежутке периметр квадрата?</span>',['3,6 < P < 4,8','1,8 < P < 2,4','2,7 < P < 3,6','3,9 < P < 4,2'],'A',['Шаршы периметрі P=4a.','0,9<a<1,2 теңсіздігін 4-ке көбейтеміз.','3,6<P<4,8.'],['Периметр квадрата P=4a.','Умножаем 0,9<a<1,2 на 4.','Получаем 3,6<P<4,8.']],
 [7,'<span class="kk">(1+x)/2 + (3+x)/3 = 3 1/6 теңдеуінің шешімі.</span><span class="ru">Решение уравнения (1+x)/2 + (3+x)/3 = 3 1/6.</span>',['2','-2','0','1','-1'],'A',['3 1/6=19/6.','Сол жақ: (3+3x+6+2x)/6=(9+5x)/6.','9+5x=19, x=2.'],['3 1/6=19/6.','Левая часть: (9+5x)/6.','9+5x=19, x=2.']],
-[8,'<span class="kk">Үш қасқыр екі қойды 40 минутта жесе, алты қасқыр бір қойды қанша уақытта жейді?</span><span class="ru">Если 3 волка съедают 2 овцы за 40 минут, за сколько 6 волков съедят 1 овцу?</span>',[['10 минут','10 минут'],['4 минут','4 минуты'],['20 минут','20 минут'],['80 минут','80 минут'],['240 минут','240 минут']],'A',['3 қасқыр 2 қойды 40 минутта жейді.','3 қасқыр 1 қойды 20 минутта жейді.','6 қасқыр болса уақыт екі есе аз: 10 минут.'],['3 волка съедают 2 овцы за 40 минут.','3 волка съедают 1 овцу за 20 минут.','6 волков — в 2 раза быстрее: 10 минут.']],
+[8,'<span class="kk">Үш қасқыр екі қойды 40 минутта жесе, алты қасқыр бір қойды қанша уақытта жейді?</span><span class="ru">Если 3 волка съедают 2 овцы за 40 минут, за сколько 6 волков съедят 1 овцу?</span>',['10 минут','4 минут','20 минут','80 минут','240 минут'],'A',['3 қасқыр 2 қойды 40 минутта жейді.','3 қасқыр 1 қойды 20 минутта жейді.','6 қасқыр болса уақыт екі есе аз: 10 минут.'],['3 волка съедают 2 овцы за 40 минут.','3 волка съедают 1 овцу за 20 минут.','6 волков — в 2 раза быстрее: 10 минут.']],
 [9,'<span class="kk">Берілген фигураның периметрі.</span><span class="ru">Периметр данной фигуры.</span>',['124','72','26','52','36'],'A',['Көлденең кесінділер қосындысы толық еннің екі есесі: 2×36=72.','Тік кесінділер қосындысы толық биіктіктің екі есесі: 2×26=52.','P=72+52=124.'],['Сумма горизонтальных сторон равна 2×36=72.','Сумма вертикальных сторон равна 2×26=52.','P=72+52=124.'],figs.f9],
 [10,'<span class="kk">Тек 0 мен 1 цифрларынан неше төрт таңбалы сан жазуға болады?</span><span class="ru">Сколько четырёхзначных чисел можно составить только из 0 и 1?</span>',['8','6','7','9','5'],'A',['Бірінші цифр 0 болмайды, сондықтан ол 1.','Қалған 3 орынға 0 немесе 1 қоюға болады.','2³=8.'],['Первая цифра не может быть 0, значит она 1.','В остальные 3 позиции можно поставить 0 или 1.','2³=8.']],
 [11,'<span class="kk">Кестедегі тәуелділікті анықтайтын теңдеу.</span><span class="ru">Уравнение зависимости по таблице.</span><table class="table"><tr><th>x</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><th>y</th><td>1</td><td>4</td><td>7</td><td>10</td><td>13</td></tr></table>',['y=3x−2','y=4x−3','y=x+3','y=2x+1','y=2x−1'],'A',['y әр жолы 3-ке артады.','Формула y=3x+b.','x=1, y=1: b=-2.','y=3x−2.'],['y увеличивается на 3.','Формула y=3x+b.','При x=1, y=1 получаем b=-2.','y=3x−2.']],
-[12,'<span class="kk">Балықтарға сәйкес сектордың ең жуық градусы.</span><span class="ru">Приблизительная градусная мера сектора рыб.</span><table class="table"><tr><th>Түрі</th><th>Саны</th></tr><tr><td>Сүтқоректілер</td><td>4</td></tr><tr><td>Құстар</td><td>8,6</td></tr><tr><td>Бауырымен жорғалаушылар</td><td>6</td></tr><tr><td>Қосмекенділер</td><td>3,4</td></tr><tr><td>Балықтар</td><td>20</td></tr><tr><td>Барлығы</td><td>42</td></tr></table>',['171°','134°','150°','162°','195°'],'A',['Балықтар үлесі: 20/42.','Дөңгелек диаграмма бұрышы: 20/42×360≈171°.'],['Доля рыб: 20/42.','Угол сектора: 20/42×360≈171°.']],
+[12,'<span class="kk">Кестедегі мәліметтерді дөңгелек диаграммаға салғанда, балықтарға сәйкес сектордың ең жуық градусын табыңыз.</span><span class="ru">По данным таблицы найдите приблизительную величину сектора круговой диаграммы, соответствующего рыбам.</span><table class="table"><tr><th><span class="kk">Түрі</span><span class="ru">Вид животных</span></th><th><span class="kk">Саны</span><span class="ru">Количество</span></th></tr><tr><td><span class="kk">Сүтқоректілер</span><span class="ru">Млекопитающие</span></td><td>4</td></tr><tr><td><span class="kk">Құстар</span><span class="ru">Птицы</span></td><td>8,6</td></tr><tr><td><span class="kk">Бауырымен жорғалаушылар</span><span class="ru">Пресмыкающиеся</span></td><td>6</td></tr><tr><td><span class="kk">Қосмекенділер</span><span class="ru">Земноводные</span></td><td>3,4</td></tr><tr><td><span class="kk">Балықтар</span><span class="ru">Рыбы</span></td><td>20</td></tr><tr><td><span class="kk">Барлығы</span><span class="ru">Всего</span></td><td>42</td></tr></table>',['171°','134°','150°','162°','195°'],'A',['Балықтар үлесі: 20/42.','Дөңгелек диаграмма бұрышы: 20/42×360≈171°.'],['Доля рыб: 20/42.','Угол сектора: 20/42×360≈171°.']],
 [13,'<span class="kk">Сызбадағы пәтердің ауданын табыңыз.</span><span class="ru">Найдите площадь квартиры по схеме.</span>',['94,5 м²','945 м²','95 м²','94 м²','90 м²'],'A',['Сызбаны тіктөртбұрыштарға бөліп есептейміз.','Әр бөліктің ауданын қосамыз.','Жалпы аудан 94,5 м².'],['Делим план на прямоугольники.','Складываем площади частей.','Общая площадь 94,5 м².']],
 [14,'<span class="kk">Кестедегі тәуелділікті анықтайтын теңдеу.</span><span class="ru">Уравнение зависимости по таблице.</span><table class="table"><tr><th>x</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><th>y</th><td>1</td><td>5</td><td>9</td><td>13</td><td>17</td></tr></table>',['y=4x−3','y=x+2','y=3x−2','y=2x−1','y=2x+1'],'A',['y әр жолы 4-ке артады.','Формула y=4x+b.','x=1, y=1: b=-3.','y=4x−3.'],['y увеличивается на 4.','Формула y=4x+b.','При x=1, y=1 получаем b=-3.','y=4x−3.']],
 [15,'<span class="kk">55 шар теңқабырғалы үшбұрыш қалпында орналасқан. Неше қатар?</span><span class="ru">55 шаров расположены треугольником. Сколько рядов?</span>',['10','8','9','11','12'],'A',['Үшбұрыштық орналасу: 1+2+...+n.','n(n+1)/2=55.','10×11/2=55.','n=10.'],['Треугольная раскладка: 1+2+...+n.','n(n+1)/2=55.','10×11/2=55.','n=10.'],figs.f15]
@@ -139,75 +133,29 @@ let R1='Вторая половина XIX века, особенно его по
 let T2='«Жаратылыстану» ғылымы екі сөзден құралған — жаратылыс және тану. Бұл сөздің синонимі ретінде табиғаттану терминін келтіруге болады. Қазіргі кезде жаратылыстану дәл ғылымдар қатарына жатады. Дәл жаратылыстану — көбіне математикалық формулалармен берілетін нақты білім. Дегенмен бұл ғылым табиғаты туралы білімдердің ақырғы қорытындысы емес, адамзатқа қазіргі даму кезеңінде белгілі болып отырған білім жетістігі ғана.';
 let R2='Естествознание состоит из двух смысловых частей: природа и познание. Близким термином является природоведение. Сегодня естествознание относится к точным наукам. Точное естествознание — это конкретное знание, часто выраженное математическими формулами. Однако оно не является окончательным итогом всех знаний о природе, а отражает уровень знаний, достигнутый человечеством на современном этапе.';
 let T3='Қазақ халқының өмір салтына көрік беретін дәстүр — тұсау кесу. Бала жүре бастаған кезде кішігірім той жасап, тұсауын кеседі. Ол үшін арнайы ала жіп дайындалады. Бұл «біреудің ала жібін аттамасын» деген ұғымнан шыққан. Сол жіппен баланың аяғын тұсап, оны аяғын жылдам басатын әйелге кестіреді. Тұсау кесілген баланы қолынан ұстап тез жүгіртеді, шашу шашады.';
-let R3='Обряд разрезания пут — один из красивых детских обрядов в традиционной культуре. Когда ребёнок начинает ходить, семья устраивает небольшой праздник и символически разрезает путы на его ногах. Для обряда готовят пёструю нить, которая выражает пожелание честности и правильного жизненного пути. Нить разрезает женщина, которая ходит быстро и легко. После этого ребёнка берут за руки, помогают ему пройти или пробежать, а вокруг разбрасывают праздничные угощения.';
+let R3='Тұсау кесу — казахский обряд, украшающий народный образ жизни. Когда ребёнок начинает ходить, для него устраивают небольшой праздник и разрезают путы. Для обряда готовят пёструю нить. Его смысл связан с пожеланием, чтобы ребёнок вырос честным человеком и не переходил чужую черту. После разрезания пут ребёнка ведут или быстро проводят, а вокруг разбрасывают шашу.';
 let T4='Болаттың құрылымын жақсарту үшін оны термиялық өңдеуден өткізеді; термиялық өңдеудің маңызды әдісі — болатты суару және жасыту. Болатты суарғанда 760–900 °C-қа дейін қыздырып, бірден суға малып суытады, нәтижесінде болат қатты және берік болады, бірақ морт сынғыш келеді. Суарған болатты қайта қыздырып, біртіндеп суытқанда болат босап, жұмсап, жасиды. Пайдалану ретіне қарай болат құрылымдық, аспаптық және айрықша химиялық-физикалық қасиеттері бар болат болып бөлінеді.';
 let R4='Для улучшения структуры сталь подвергают термической обработке. Важные методы — закалка и отпуск. При закалке сталь нагревают до 760–900 °C и быстро охлаждают в воде; она становится твёрдой и прочной, но хрупкой. При повторном нагреве и постепенном охлаждении сталь становится мягче. По назначению сталь делится на конструкционную, инструментальную и сталь с особыми химико-физическими свойствами.';
-
 let A=[
-[16,'<span class="kk">Сөйлемді мағынасына сай толықтырыңыз: Математика дүниені танудың ______ жақтарын зерттейтін ғылымдардың құралына айналған.</span><span class="ru">Дополните предложение по смыслу: Математика стала инструментом наук, изучающих ______ стороны познания мира.</span>',
-[['саналық','количественные'],['салалық','отраслевые'],['беймәлім','неизвестные'],['жинақылық','собранные'],['тұтас','целостные']],'A',
-['Мағына сандық, өлшенетін қырлар туралы.','Математика сан, мөлшер, өлшеу арқылы зерттелетін жақтарды сипаттайды.','Сондықтан «саналық» сөзі сәйкес келеді.'],
-['По смыслу речь идёт о сторонах мира, которые можно измерять и выражать числами.','Математика используется именно для количественного анализа.','Поэтому подходит вариант «количественные».']],
-[17,'<span class="kk">Біртектес сапалық ______ білдіретін қарама-қарсы мәндегі сөздер антонимдер деп аталады.</span><span class="ru">Дополните предложение: Антонимы — это слова, которые выражают противоположные качественные ______.</span>',
-[['ұғымды','понятия'],['пікірді','мнения'],['байланысты','связи'],['ойды','мысли'],['зерттеуді','исследования']],'A',
-['Антонимдер сапалық ұғымдарды қарама-қарсы мағынада білдіреді.','Мысалы: жақсы — жаман, биік — аласа.','Сондықтан дұрыс жауап — «ұғымды».'],
-['Антонимы противопоставляют именно качественные понятия: хороший — плохой, высокий — низкий.','Здесь нужно слово, обозначающее смысловую категорию, а не мнение или исследование.','Поэтому правильный ответ — «понятия».']],
-[18,'<span class="kk">Сөз тудырушы жұрнақ арқылы жасалған сөздермен толықтырыңыз: Қайын жұрты — (...); Өз жұрты — (...); Нағашы жұрты — (...).</span><span class="ru">Выберите ряд слов, образованных с помощью словообразовательного суффикса и обозначающих устойчивое качество.</span>',
-[['міншіл, күншіл, сыншыл','придирчивый, завистливый, критичный'],['мінеп, күндеп, сынап','придираться, завидовать, критиковать'],['міншіл, күндес, сынау','придирчивый, соперник, критика'],['міншілдік, күндеу, сынау','придирчивость, зависть, критика'],['мін, күнде, сына','недостаток, ежедневно, критикуй']],'A',
-['-шіл жұрнағы бейімділік пен мінезді білдіреді.','Берілген қатарда үш сөз де осы жұрнақ арқылы жасалған.','Дұрыс қатар: міншіл, күншіл, сыншыл.'],
-['Нужны слова, обозначающие качество или склонность человека.','В первом ряду все слова имеют одинаковый словообразовательный тип и обозначают устойчивое свойство.','Поэтому правильный ряд: «придирчивый, завистливый, критичный».']],
+[16,'<span class="kk">Сөйлемді мағынасына сай толықтырыңыз: Математика дүниені танудың ______ жақтарын зерттейтін ғылымдардың құралына айналған.</span><span class="ru">Дополните по смыслу: Математика стала инструментом наук, изучающих ______ стороны познания мира.</span>',[['саналық','количественные'],['салалық','отраслевые'],['беймәлім','неизвестные'],['жинақылық','собранные'],['тұтас','целостные']],'A',['Мағына сандық, өлшенетін қырлар туралы.','Сондықтан «саналық» сәйкес.'],['Смысл связан с количественными, измеряемыми сторонами.','Подходит «саналық».']],
+[17,'<span class="kk">Біртектес сапалық ______ білдіретін қарама-қарсы мәндегі сөздер антонимдер деп аталады.</span><span class="ru">Антонимы — слова, выражающие противоположные качественные ______.</span>',[['ұғымды','понятия'],['пікірді','мнения'],['байланысты','связи'],['ойды','мысли'],['зерттеуді','исследования']],'A',['Антонимдер сапалық ұғымдарды қарама-қарсы білдіреді.','Сондықтан «ұғымды».'],['Антонимы выражают противоположные качественные понятия.','Поэтому подходит «ұғымды».']],
+[18,'<span class="kk">Сөз тудырушы жұрнақ арқылы жасалған сөздермен толықтырыңыз: Қайын жұрты — (...); Өз жұрты — (...); Нағашы жұрты — (...).</span><span class="ru">Заполните словами со словообразовательным суффиксом: родня супруга — (...); своя родня — (...); родня по матери — (...).</span>',[['міншіл, күншіл, сыншыл','придирчивый, завистливый, критичный'],['мінеп, күндеп, сынап','придираться, завидовать, критиковать'],['міншіл, күндес, сынау','придирчивый, соперник, критика'],['міншілдік, күндеу, сынау','придирчивость, зависть, критика'],['мін, күнде, сына','недостаток, ежедневно, критикуй']],'A',['-шіл жұрнағы бейімділік пен мінезді білдіреді.','Дұрыс қатар: міншіл, күншіл, сыншыл.'],['Суффикс -шіл обозначает склонность или качество.','Правильный ряд: міншіл, күншіл, сыншыл.']],
 ['TEXT1',T1,R1],
-[19,'<span class="kk">«Ұлғайды» сөзіне мағынасы жақын сөзді табыңыз.</span><span class="ru">Найдите слово, близкое по значению к слову «увеличилось».</span>',
-[['көбейді','возросло'],['жайылды','распространилось'],['ұласты','продолжилось'],['өндірді','произвело'],['ұқсатты','уподобило']],'A',
-['«Ұлғайды» — артты, көбейді деген мағына береді.','Мәтінде қалам қайраткерлерінің жұмыстары артқаны туралы айтылған.','Сондықтан мағынасы жақын сөз — «көбейді».'],
-['Слово «увеличилось» означает «стало больше, возросло».','В тексте говорится, что объём работы деятелей пера стал больше.','Поэтому правильный вариант — «возросло».']],
-[20,'<span class="kk">Берілген мәтіннің мақсатын анықтаңыз.</span><span class="ru">Определите цель данного текста.</span>',
-[['Әлеуметтік-экономикалық өзгерістерді және оның тілге әсерін көрсету','Показать социально-экономические изменения и их влияние на язык'],['Оқу-білім мәселесін БАҚ арқылы көрсету','Показать развитие образования через средства массовой информации'],['Тілді дәуірлеу қағидаттарын айқындау','Определить принципы периодизации языка'],['Қалам қайраткерлерінің жұмысын таныту','Рассказать только о деятельности писателей'],['Тіл саясатын жоғары деңгейде көрсету','Описать только языковую политику']],'A',
-['Мәтін XIX ғасырдағы қоғамдағы өзгерістерді сипаттайды.','Сол өзгерістердің тілдің дамуына қалай әсер еткені түсіндіріледі.','Сондықтан мәтіннің мақсаты — әлеуметтік-экономикалық өзгерістерді және олардың тілге әсерін көрсету.'],
-['Текст описывает общественные изменения второй половины XIX века.','Главная мысль — объяснить, как эти изменения повлияли на развитие письменного литературного языка.','Поэтому цель текста — показать социально-экономические изменения и их влияние на язык.']],
-[21,'<span class="kk">Берілген мәтінге сәйкес тақырыпты таңдаңыз.</span><span class="ru">Выберите тему, соответствующую тексту.</span>',
-[['Тіл мен қоғам ықпалдастығы','Взаимодействие языка и общества'],['Діни оқу','Религиозное обучение'],['Кітап бастыру ісі','Книгоиздательское дело'],['Тілдің даму кезеңдері','Этапы развития языка'],['Тіл саясаты','Языковая политика']],'A',
-['Мәтін тек діни оқу немесе кітап бастыру туралы ғана емес.','Негізгі ой — қоғамдағы өзгерістердің тілге ықпалы.','Сондықтан ең дәл тақырып — «Тіл мен қоғам ықпалдастығы».'],
-['Текст не ограничивается религиозным обучением или книгоизданием.','Главное содержание — связь общественных изменений и развития языка.','Поэтому наиболее точная тема — «Взаимодействие языка и общества».']],
+[19,'«Ұлғайды» сөзіне мағынасы жақын сөзді табыңыз. / Найдите близкое по значению слово.',[['көбейді','возросло'],['жайылды','распространилось'],['ұласты','продолжилось'],['өндірді','произвело'],['ұқсатты','уподобило']],'A',['«Ұлғайды» — артты, көбейді деген мағына.','Дұрыс жауап — көбейді.'],['«Ұлғайды» означает увеличилось, возросло.','Правильный ответ — көбейді.']],
+[20,'<span class="kk">Берілген мәтіннің мақсатын анықтаңыз.</span><span class="ru">Определите цель текста.</span>',[['Әлеуметтік-экономикалық өзгерістерді және оның тілге әсерін көрсету','Показать социально-экономические изменения и их влияние на язык'],'Оқу-білім мәселесін БАҚ арқылы көрсету','Тілді дәуірлеу қағидаттарын айқындау','Қалам қайраткерлерінің жұмысын таныту',['Тіл саясатын жоғары деңгейде көрсету','Показать языковую политику на высоком уровне']],'A',['Мәтін қоғамдағы өзгерістердің тілге әсерін көрсетеді.','Сондықтан бірінші жауап дұрыс.'],['Текст показывает влияние общественных изменений на язык.','Поэтому первый вариант точный.']],
+[21,'<span class="kk">Берілген мәтінге сәйкес тақырыпты таңдаңыз.</span><span class="ru">Выберите тему текста.</span>',[['Тіл мен қоғам ықпалдастығы','Взаимодействие языка и общества'],['Діни оқу','Религиозное обучение'],['Кітап бастыру ісі','Книгоиздательское дело'],['Тілдің даму кезеңдері','Этапы развития языка'],['Тіл саясаты','Языковая политика']],'A',['Негізгі мазмұн — қоғам мен тілдің байланысы.','Дұрыс тақырып — Тіл мен қоғам ықпалдастығы.'],['Главная мысль — связь общества и языка.','Правильная тема — взаимодействие языка и общества.']],
 ['TEXT2',T2,R2],
-[22,'<span class="kk">«Ақырғы» сөзіне мағынасы жақын сөзді табыңыз.</span><span class="ru">Найдите слово, близкое по значению к слову «окончательный».</span>',
-[['соңғы','последний'],['ортаңғы','средний'],['бірінші','первый'],['бастапқы','начальный'],['алғашқы','первоначальный']],'A',
-['«Ақырғы» — соңғы, ең соңындағы деген мағына береді.','Сондықтан мағынасы жақын сөз — «соңғы».'],
-['Слово «окончательный» означает «последний, завершающий».','Из предложенных вариантов ближе всего слово «последний».']],
-[23,'<span class="kk">Берілген мәтінге сәйкес тақырыпты таңдаңыз.</span><span class="ru">Выберите тему, соответствующую тексту.</span>',
-[['Дәл ғылымдар','Точные науки'],['Жаратылыс','Природа'],['Жаратылыс заңы','Закон природы'],['Ғалымдар','Учёные'],['Зерттелім','Исследование']],'A',
-['Мәтінде жаратылыстанудың дәл ғылымдар қатарына жататыны айтылады.','Негізгі мазмұн нақты білім, формула және ғылыми дәлдік туралы.','Сондықтан дұрыс тақырып — «Дәл ғылымдар».'],
-['В тексте говорится, что естествознание относится к точным наукам.','Основные признаки текста — точное знание, формулы и научная системность.','Поэтому правильная тема — «Точные науки».']],
-[24,'<span class="kk">Мәтіннің мақсатын анықтаңыз.</span><span class="ru">Определите цель данного текста.</span>',
-[['жаратылыстану ғылымы туралы түсінік','дать представление о естествознании'],['жаратылыстану жетістіктері туралы','рассказать о достижениях естествознания'],['математикалық амалдар туралы','объяснить математические действия'],['зерттелуі туралы','рассказать только об исследовании науки'],['шығу тарихына шолу','дать исторический обзор происхождения науки']],'A',
-['Мәтін жаратылыстану сөзінің мағынасын және ғылым ретіндегі сипатын түсіндіреді.','Онда жетістіктер тізімі немесе толық тарих берілмейді.','Сондықтан мақсат — жаратылыстану ғылымы туралы түсінік беру.'],
-['Текст объясняет значение естествознания и его общий научный характер.','Он не перечисляет достижения и не даёт подробную историю возникновения науки.','Поэтому цель текста — дать представление о естествознании.']],
+[22,'«Ақырғы» сөзіне мағынасы жақын сөзді табыңыз. / Найдите близкое по значению слово.',[['соңғы','последний'],['ортаңғы','средний'],['бірінші','первый'],['бастапқы','начальный'],['алғашқы','первоначальный']],'A',['Ақырғы — соңғы, ең соңындағы деген сөз.','Сондықтан «соңғы».'],['Ақырғы означает конечный, последний.','Подходит «соңғы».']],
+[23,'<span class="kk">Мәтінге сәйкес тақырып.</span><span class="ru">Тема текста.</span>',[['Дәл ғылымдар','Точные науки'],['Жаратылыс','Природа'],['Жаратылыс заңы','Закон природы'],['Ғалымдар','Учёные'],['Зерттелім','Исследование']],'A',['Мәтінде жаратылыстанудың дәл ғылым екені айтылады.','Дұрыс жауап — Дәл ғылымдар.'],['В тексте говорится о естествознании как о точной науке.','Правильный ответ — точные науки.']],
+[24,'<span class="kk">Мәтіннің мақсатын анықтаңыз.</span><span class="ru">Определите цель текста.</span>',[['жаратылыстану ғылымы туралы түсінік','дать представление о естествознании'],'жаратылыстану жетістіктері туралы','математикалық амалдар туралы','зерттелуі туралы','шығу тарихына шолу'],'A',['Мәтін жаратылыстанудың не екенін түсіндіреді.','Мақсат — түсінік беру.'],['Текст объясняет, что такое естествознание.','Цель — дать понятие.']],
 ['TEXT3',T3,R3],
-[25,'<span class="kk">Берілген мәтінге сәйкес тақырыпты таңдаңыз.</span><span class="ru">Выберите тему, соответствующую тексту.</span>',
-[['Тұсау кесу','Обряд разрезания пут'],['Өмір салты','Образ жизни'],['Дәстүр','Традиция'],['Той','Праздник'],['Шашу','Праздничное угощение']],'A',
-['Мәтін нақты тұсау кесу дәстүрінің қалай орындалатынын сипаттайды.','«Дәстүр» жалпы атау, ал мәтіннің нақты тақырыбы — тұсау кесу.','Сондықтан дұрыс жауап — «Тұсау кесу».'],
-['Текст подробно описывает конкретный детский обряд: когда он проводится, что означает нить и как проходит действие.','Слово «традиция» слишком общее, а текст посвящён именно обряду разрезания пут.','Поэтому правильная тема — «Обряд разрезания пут».']],
-[26,'<span class="kk">Мәтіннің мақсатын анықтаңыз.</span><span class="ru">Определите цель текста.</span>',
-[['ақпарат беру','информирование'],['талдау','анализ'],['салыстыру','сравнение'],['зерттеу','исследование'],['пікір білдіру','выражение мнения']],'A',
-['Мәтін дәстүр туралы мәлімет береді.','Онда салыстыру, зерттеу немесе авторлық пікір жоқ.','Сондықтан мәтіннің мақсаты — ақпарат беру.'],
-['Текст сообщает сведения об обряде и объясняет порядок его проведения.','В нём нет сравнения, исследования или выражения личной позиции автора.','Поэтому цель текста — информирование.']],
-[27,'<span class="kk">«Тұсау» сөзіне мағынасы жақын сөзді табыңыз.</span><span class="ru">Найдите слово, близкое по смыслу к слову «путы».</span>',
-[['байлау','связывание'],['тағу','надевание'],['кесу','разрезание'],['шешу','развязывание'],['орау','обматывание']],'A',
-['«Тұсау» — аяққа салынатын байлау, қозғалысты шектеу мағынасындағы сөз.','Сондықтан мағынасы жақын сөз — «байлау».'],
-['Слово «путы» означает связывание, ограничение движения.','Из предложенных вариантов ближе всего слово «связывание».']],
+[25,'<span class="kk">Мәтінге сәйкес тақырып.</span><span class="ru">Тема текста.</span>',[['Тұсау кесу','Обряд разрезания пут'],['Өмір салты','Образ жизни'],['Дәстүр','Традиция'],['Той','Праздник'],['Шашу','Праздничное угощение']],'A',['Мәтін нақты тұсау кесу туралы.','Жалпы «дәстүр» емес, нақты тақырып — Тұсау кесу.'],['Текст именно об обряде тұсау кесу.','Не общая «традиция», а конкретная тема.']],
+[26,'<span class="kk">Мәтіннің мақсатын анықтаңыз.</span><span class="ru">Определите цель текста.</span>',[['ақпарат беру','информирование'],['талдау','анализ'],['салыстыру','сравнение'],['зерттеу','исследование'],['пікір білдіру','выражение мнения']],'A',['Мәтінде дәстүр туралы ақпарат беріледі.','Талдау немесе пікір жоқ.'],['Текст сообщает информацию об обряде.','В нём нет анализа или личного мнения.']],
+[27,'«Тұсау» сөзіне мағынасы жақын сөзді табыңыз. / Найдите близкое по смыслу слово.',[['байлау','связывание'],['тағу','надевание'],['кесу','разрезание'],['шешу','развязывание'],['орау','обматывание']],'A',['Тұсау — байлау, қозғалысты шектеу.','Дұрыс жауап — байлау.'],['Тұсау означает путы, связывание.','Правильный ответ — байлау.']],
 ['TEXT4',T4,R4],
-[28,'<span class="kk">Ойды жалғастырыңыз: Болатты суару мен жасыту...</span><span class="ru">Продолжите мысль: Закалка и отпуск стали...</span>',
-[['құрылымын жақсарту үшін қажет','нужны для улучшения структуры'],['оны пайдалану үшін қажет','нужны для использования стали'],['жинау үшін қажет','нужны для сборки'],['жұмыс үшін қажет','нужны для выполнения работы'],['оны сындыру үшін қажет','нужны для разрушения стали']],'A',
-['Мәтінде болаттың құрылымын жақсарту үшін термиялық өңдеу жүргізілетіні айтылған.','Суару мен жасыту — осы термиялық өңдеу әдістері.','Сондықтан дұрыс жалғасы — құрылымын жақсарту үшін қажет.'],
-['В тексте сказано, что термическая обработка применяется для улучшения структуры стали.','Закалка и отпуск названы важными способами такой обработки.','Поэтому правильное продолжение — «нужны для улучшения структуры».']],
-[29,'<span class="kk">Мәтінге сәйкес ақпаратты табыңыз.</span><span class="ru">Найдите информацию, соответствующую тексту.</span>',
-[['болатты суытқанда, ол жасиды','при постепенном охлаждении сталь становится мягче'],['болаттың ерекше қасиеті бар','сталь всегда обладает только особыми свойствами'],['болат — қара металлургияның негізгі өнімі','сталь названа основным продуктом чёрной металлургии'],['болат өндірісі экономикалық деңгейін анықтайды','производство стали определяет экономический уровень'],['болат көміртектен және басқа элементтерден тұрады','сталь состоит из углерода и других элементов']],'A',
-['Мәтінде суарған болатты қайта қыздырып, біртіндеп суытқанда болат жұмсарып, жаситыны айтылған.','Осы ақпарат бірінші нұсқамен сәйкес келеді.'],
-['В тексте сказано, что после повторного нагрева и постепенного охлаждения сталь становится мягче.','Именно эта информация передана в первом варианте.']],
-[30,'<span class="kk">«Жұмсақ» сөзіне мағынасы жақын сөзді табыңыз.</span><span class="ru">Найдите слово, близкое по значению к слову «мягкий».</span>',
-[['үлпілдек','мягкий, пушистый'],['сынғыш','хрупкий'],['иілгіш','гибкий'],['ашық','открытый'],['тығыз','плотный']],'A',
-['«Жұмсақ» — қатты емес, нәзік, босаң деген мағына береді.','Берілген нұсқалардың ішіндегі ең жақыны — «үлпілдек».'],
-['Слово «мягкий» означает «не твёрдый, нежный».','Из предложенных вариантов ближе всего значение «мягкий, пушистый».']]
+[28,'<span class="kk">Ойды жалғастырыңыз: Болатты суару мен жасыту...</span><span class="ru">Продолжите мысль: Закалка и отпуск стали...</span>',[['құрылымын жақсарту үшін қажет','нужны для улучшения структуры'],['оны пайдалану үшін қажет','нужны для использования стали'],['жинау үшін қажет','нужны для сборки'],['жұмыс үшін қажет','нужны для работы'],['оны сындыру үшін қажет','нужны для разрушения стали']],'A',['Мәтінде термиялық өңдеу болат құрылымын жақсарту үшін жасалатыны айтылған.','Суару мен жасыту — осы өңдеу әдістері.'],['В тексте сказано, что термическая обработка нужна для улучшения структуры стали.','Закалка и отпуск — эти методы обработки.']],
+[29,'<span class="kk">Мәтінге сәйкес ақпаратты табыңыз.</span><span class="ru">Найдите информацию по тексту.</span>',[['болатты суытқанда, ол жасиды','при постепенном охлаждении сталь становится мягче'],['болаттың ерекше қасиеті бар','сталь имеет особые свойства'],['болат — қара металлургияның негізгі өнімі','сталь — основной продукт чёрной металлургии'],['болат өндірісі экономикалық деңгейін анықтайды','производство стали определяет экономический уровень'],['болат көміртектен және басқа элементтерден тұрады','сталь состоит из углерода и других элементов']],'A',['Мәтінде қайта қыздырып, біртіндеп суытқанда болат жаситыны айтылған.','Сондықтан бірінші нұсқа сәйкес.'],['В тексте сказано, что при постепенном охлаждении сталь отпускается и становится мягче.','Этому соответствует первый вариант.']],
+[30,'«Жұмсақ» сөзіне мағынасы жақын сөзді табыңыз. / Найдите близкое по смыслу слово.',[['үлпілдек','мягкий, пушистый'],['сынғыш','хрупкий'],['иілгіш','гибкий'],['ашық','открытый'],['тығыз','плотный']],'A',['Жұмсақ — қатты емес, нәзік, босаң.','Ең жақын нұсқа — үлпілдек.'],['Жұмсақ означает мягкий, не твёрдый.','Ближайший вариант — үлпілдек.']]
 ];document.getElementById('analyticalQs').innerHTML=A.map(x=>x[0]==='TEXT1'||x[0]==='TEXT2'||x[0]==='TEXT3'||x[0]==='TEXT4'?textBlock(x[1],x[2]):q('a',...x)).join('');
 
 function renderEnglish(){
@@ -343,26 +291,26 @@ document.getElementById('englishBlock').innerHTML=html
 }
 renderEnglish();
 </script>
-<script id="nazerke-final-language-fix">
+<script id="final-lang">
 (function(){
-  function setLanguage(lang){
-    var isRu = lang === "ru";
-    document.body.classList.toggle("lang-ru", isRu);
-    document.documentElement.lang = isRu ? "ru" : "kk";
-    document.querySelectorAll(".lang button").forEach(function(btn){
-      btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
+  function applyLang(lang){
+    var isRu = lang === 'ru';
+    document.body.classList.toggle('rus', isRu);
+    document.documentElement.lang = isRu ? 'ru' : 'kk';
+    document.querySelectorAll('.lang button').forEach(function(b){
+      var on = b.getAttribute('data-lang') === lang;
+      b.classList.toggle('active', on);
+      b.classList.toggle('on', on);
     });
   }
-
-  window.setLanguage = setLanguage;
-  window.setLang = function(lang){ setLanguage(lang === "rus" ? "ru" : lang); };
-  window.lang = function(lang){ setLanguage(lang === "rus" ? "ru" : lang); };
-
-  document.addEventListener("DOMContentLoaded", function(){
-    document.querySelectorAll(".lang button").forEach(function(btn){
-      btn.onclick = function(){ setLanguage(btn.getAttribute("data-lang")); };
+  window.lang = function(lang){applyLang(lang)};
+  window.setLang = function(lang){applyLang(lang)};
+  window.setLanguage = function(lang){applyLang(lang === 'rus' ? 'ru' : lang)};
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('.lang button').forEach(function(b){
+      b.onclick = function(){applyLang(b.getAttribute('data-lang'))};
     });
-    setLanguage("kk");
+    applyLang('kk');
   });
 })();
 </script>
