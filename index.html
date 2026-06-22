@@ -1,94 +1,7 @@
 <!doctype html><html lang="kk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Магистратура тесті</title><style>
 :root{--bg:#f6f7fb;--card:#fff;--txt:#172033;--mut:#667085;--line:#e6e8ef;--main:#4f46e5;--soft:#eef2ff;--green:#16a34a;--red:#dc2626;--shadow:0 16px 40px #10182814;--r:22px}*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--txt)}.wrap{max-width:1160px;margin:auto;padding:18px}.top{position:sticky;top:0;background:#ffffffdf;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:10}.nav{display:flex;gap:10px;justify-content:space-between;align-items:center;flex-wrap:wrap}.brand{font-weight:900}.links{display:flex;gap:8px;flex-wrap:wrap}.links a,.lang button{border:1px solid var(--line);background:white;border-radius:999px;padding:9px 12px;font-weight:750;text-decoration:none;color:var(--txt)}.lang button{cursor:pointer}.lang .on{background:var(--main);color:white}.hero{padding:42px 0 24px}.heroBox{border:1px solid var(--line);background:linear-gradient(135deg,#fff,#eef2ff);border-radius:30px;box-shadow:var(--shadow);padding:30px}h1{font-size:clamp(30px,5vw,54px);line-height:1;margin:10px 0;letter-spacing:-.04em}h2{font-size:clamp(24px,3vw,38px);margin:0 0 10px}p{line-height:1.65}.notice{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}.mini{background:white;border:1px solid var(--line);border-radius:18px;padding:14px}.btn{border:0;background:var(--main);color:white;border-radius:14px;padding:11px 15px;font-weight:850;cursor:pointer;text-decoration:none;display:inline-block}.btn2{background:#f3f4f6;color:#111;border:1px solid var(--line)}section{padding:28px 0}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:20px;margin:16px 0}.q{background:white;border:1px solid var(--line);border-radius:18px;padding:15px;margin:14px 0}.qt{font-weight:850;margin:0 0 12px}.op{display:block;background:#f9fafb;border:1px solid #eef0f3;border-radius:12px;padding:10px;margin:7px 0;cursor:pointer}.op:hover{background:var(--soft)}.exp{display:none;background:#f8fafc;border:1px solid #e8edf5;border-radius:14px;padding:12px;margin-top:10px}.q.show .exp{display:block}.q.ok{border-color:#86efac;background:#f0fdf4}.q.no{border-color:#fca5a5;background:#fff1f2}.res{font-weight:900;margin-top:12px}.steps{margin:0;padding-left:22px}.steps li{margin:7px 0}.svgbox{overflow:auto;text-align:center;background:#fbfdff;border:1px solid #eef2f7;border-radius:16px;padding:10px;margin:10px 0}.text{background:#fbfdff;border:1px solid #e8edf5;border-radius:16px;padding:15px;margin:12px 0;line-height:1.75}.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}.tab{border:1px solid var(--line);background:white;border-radius:14px;padding:10px;font-weight:850;cursor:pointer}.tab.on{background:var(--main);color:white}.tc{display:none}.tc.on{display:block}audio{width:100%}.vocab{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.vocab div{background:#f9fafb;border:1px solid var(--line);border-radius:14px;padding:10px}.table{border-collapse:collapse;margin:10px 0;max-width:560px;width:100%}.table td,.table th{border:1px solid #cbd5e1;padding:7px;text-align:center}.ru{display:none}body.rus .kk{display:none}body.rus .ru{display:initial}body.rus .rub{display:block}.rub{display:none}body.rus .kkb{display:none}.kkb{display:block}@media(max-width:720px){.notice,.vocab{grid-template-columns:1fr}.tabs{grid-template-columns:repeat(2,1fr)}}
 
-/* ===== FINAL: ONLY ONE LANGUAGE + FIXED TOP MENU ===== */
-body{padding-top:96px!important;scroll-padding-top:112px!important}
-header.top,.topbar{
-  position:fixed!important;top:0!important;left:0!important;right:0!important;width:100%!important;
-  z-index:999999!important;background:rgba(255,255,255,.98)!important;
-  border-bottom:1px solid #e5e7eb!important;box-shadow:0 8px 24px rgba(15,23,42,.08)!important;
-}
-header.top .wrap,.topbar .wrap{max-width:1160px!important;margin:0 auto!important}
-.links,.navlinks{display:flex!important;align-items:center!important;flex-wrap:wrap!important;gap:8px!important}
-.ru,.rub{display:none!important}.kk,.kkb{display:initial!important}.kkb{display:block!important}
-body.rus .kk,body.rus .kkb{display:none!important}
-body.rus .ru{display:initial!important}
-body.rus .rub{display:block!important}
-.lang button.active,.lang button.on{background:var(--main,#4f46e5)!important;color:white!important;border-color:var(--main,#4f46e5)!important}
-@media(max-width:720px){body{padding-top:135px!important;scroll-padding-top:145px!important}}
-
-
-/* ===== FINAL FIX: TOP CARDS ARE STATIC, NOT FIXED ===== */
-body{
-  padding-top:0 !important;
-  scroll-padding-top:20px !important;
-}
-header.top,
-.topbar,
-.navbar,
-.nav{
-  position:relative !important;
-  top:auto !important;
-  left:auto !important;
-  right:auto !important;
-  width:auto !important;
-  z-index:auto !important;
-  background:transparent !important;
-  backdrop-filter:none !important;
-  box-shadow:none !important;
-}
-header.top{
-  border-bottom:0 !important;
-}
-header.top .wrap.nav,
-.topbar .wrap.nav{
-  max-width:1160px !important;
-  margin:0 auto !important;
-  padding:16px !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:space-between !important;
-  gap:10px !important;
-  flex-wrap:wrap !important;
-}
-header.top .links,
-.navlinks,
-.links{
-  display:flex !important;
-  align-items:center !important;
-  gap:8px !important;
-  flex-wrap:wrap !important;
-}
-header.top .links > a,
-.navlinks > a,
-.links > a{
-  display:inline-flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  padding:10px 14px !important;
-  border-radius:16px !important;
-  background:#ffffff !important;
-  border:1px solid #dbe3ff !important;
-  box-shadow:0 6px 18px rgba(79,70,229,.10) !important;
-  font-weight:850 !important;
-  text-decoration:none !important;
-  color:#172033 !important;
-  white-space:nowrap !important;
-}
-@media(max-width:760px){
-  body{
-    padding-top:0 !important;
-    scroll-padding-top:20px !important;
-  }
-  header.top .wrap.nav,
-  .topbar .wrap.nav{
-    flex-direction:column !important;
-    align-items:flex-start !important;
-  }
-}
-
-
-/* ===== FINAL STATIC TOP CARDS: NOT FIXED, NOT STICKY ===== */
+/* ===== FINAL STATIC HEADER: cards stay only at the beginning ===== */
 body{padding-top:0!important;scroll-padding-top:20px!important}
 header.top,.topbar,.navbar,.nav{
   position:relative!important;
@@ -117,7 +30,6 @@ header.top .links>a,.navlinks>a,.links>a{
   body{padding-top:0!important;scroll-padding-top:20px!important}
   header.top .wrap.nav,.topbar .wrap.nav{flex-direction:column!important;align-items:flex-start!important}
 }
-
 
 /* ===== FINAL LANGUAGE VISIBILITY ===== */
 .ru,.rub{display:none!important}
@@ -177,7 +89,7 @@ let R1='Вторая половина XIX века, особенно его по
 let T2='«Жаратылыстану» ғылымы екі сөзден құралған — жаратылыс және тану. Бұл сөздің синонимі ретінде табиғаттану терминін келтіруге болады. Қазіргі кезде жаратылыстану дәл ғылымдар қатарына жатады. Дәл жаратылыстану — көбіне математикалық формулалармен берілетін нақты білім. Дегенмен бұл ғылым табиғаты туралы білімдердің ақырғы қорытындысы емес, адамзатқа қазіргі даму кезеңінде белгілі болып отырған білім жетістігі ғана.';
 let R2='Естествознание состоит из двух смысловых частей: природа и познание. Близким термином является природоведение. Сегодня естествознание относится к точным наукам. Точное естествознание — это конкретное знание, часто выраженное математическими формулами. Однако оно не является окончательным итогом всех знаний о природе, а отражает уровень знаний, достигнутый человечеством на современном этапе.';
 let T3='Қазақ халқының өмір салтына көрік беретін дәстүр — тұсау кесу. Бала жүре бастаған кезде кішігірім той жасап, тұсауын кеседі. Ол үшін арнайы ала жіп дайындалады. Бұл «біреудің ала жібін аттамасын» деген ұғымнан шыққан. Сол жіппен баланың аяғын тұсап, оны аяғын жылдам басатын әйелге кестіреді. Тұсау кесілген баланы қолынан ұстап тез жүгіртеді, шашу шашады.';
-let R3='Обряд разрезания пут (Тұсау кесер )— один из красивых детских обрядов в традиционной культуре. Когда ребёнок начинает ходить, семья устраивает небольшой праздник и символически разрезает путы на его ногах. Для обряда готовят пёструю нить, которая выражает пожелание честности и правильного жизненного пути. Нить разрезает женщина, которая ходит быстро и легко. После этого ребёнка берут за руки, помогают ему пройти или пробежать, а вокруг разбрасывают праздничное угощение.';
+let R3='Когда ребёнок делает первые самостоятельные шаги, семья часто устраивает небольшой домашний праздник. Родители стараются поддержать ребёнка, похвалить его и показать, что новый этап жизни начинается с уверенности и радости. Такие семейные моменты помогают ребёнку чувствовать заботу взрослых, а близким дают возможность разделить важное событие. Главная цель такого праздника — не торжественность, а внимание к развитию ребёнка и тёплая поддержка семьи.';
 let T4='Болаттың құрылымын жақсарту үшін оны термиялық өңдеуден өткізеді; термиялық өңдеудің маңызды әдісі — болатты суару және жасыту. Болатты суарғанда 760–900 °C-қа дейін қыздырып, бірден суға малып суытады, нәтижесінде болат қатты және берік болады, бірақ морт сынғыш келеді. Суарған болатты қайта қыздырып, біртіндеп суытқанда болат босап, жұмсап, жасиды. Пайдалану ретіне қарай болат құрылымдық, аспаптық және айрықша химиялық-физикалық қасиеттері бар болат болып бөлінеді.';
 let R4='Для улучшения структуры сталь подвергают термической обработке. Важные методы — закалка и отпуск. При закалке сталь нагревают до 760–900 °C и быстро охлаждают в воде; она становится твёрдой и прочной, но хрупкой. При повторном нагреве и постепенном охлаждении сталь становится мягче. По назначению сталь делится на конструкционную, инструментальную и сталь с особыми химико-физическими свойствами.';
 let A=[
@@ -188,16 +100,16 @@ let A=[
 [17,'<span class="kk">Біртектес сапалық ______ білдіретін қарама-қарсы мәндегі сөздер антонимдер деп аталады.</span><span class="ru">Дополните предложение: Антонимы — это слова, которые выражают противоположные качественные ______.</span>',
 [['ұғымды','понятия'],['пікірді','мнения'],['байланысты','связи'],['ойды','мысли'],['зерттеуді','исследования']],'A',
 ['Антонимдер сапалық ұғымдарды қарама-қарсы мағынада білдіреді.','Мысалы: жақсы — жаман, биік — аласа.','Сондықтан дұрыс жауап — «ұғымды».'],
-['Антонимы противопоставляют именно качественные понятия: хороший — плохой, высокий — низкий.','Здесь нужно слово, обозначающее смысловую категорию, а не мнение или исследование.','Поэтому правильный ответ — «понятия».']],
+['Антонимы противопоставляют именно качественные понятия: хороший — плохой, высокий — низкий.','Здесь нужно слово, обозначающее смысловую категорию.','Поэтому правильный ответ — «понятия».']],
 [18,'<span class="kk">Сөз тудырушы жұрнақ арқылы жасалған сөздермен толықтырыңыз.</span><span class="ru">Выберите ряд слов, образованных с помощью словообразовательного суффикса и обозначающих устойчивое качество.</span>',
 [['міншіл, күншіл, сыншыл','придирчивый, завистливый, критичный'],['мінеп, күндеп, сынап','придираться, завидовать, критиковать'],['міншіл, күндес, сынау','придирчивый, соперник, критика'],['міншілдік, күндеу, сынау','придирчивость, зависть, критика'],['мін, күнде, сына','недостаток, ежедневно, критикуй']],'A',
 ['-шіл жұрнағы бейімділік пен мінезді білдіреді.','Берілген қатарда үш сөз де осы жұрнақ арқылы жасалған.','Дұрыс қатар: міншіл, күншіл, сыншыл.'],
 ['Нужны слова, обозначающие качество или склонность человека.','В первом ряду все слова имеют одинаковый словообразовательный тип и обозначают устойчивое свойство.','Поэтому правильный ряд: «придирчивый, завистливый, критичный».']],
 ['TEXT1',T1,R1],
-[19,'<span class="kk">«Ұлғайды» сөзіне мағынасы жақын сөзді табыңыз.</span><span class="ru">Найдите слово, близкое по значению к слову «увеличилось».</span>',
-[['көбейді','возросло'],['жайылды','распространилось'],['ұласты','продолжилось'],['өндірді','произвело'],['ұқсатты','уподобило']],'A',
+[19,'<span class="kk">«Ұлғайды» сөзіне мағынасы жақын сөзді табыңыз.</span><span class="ru">Найдите синоним к слову «возрос».</span>',
+[['көбейді','увеличился'],['жайылды','распространился'],['ұласты','продолжился'],['өндірді','произвёл'],['ұқсатты','сравнил']],'A',
 ['«Ұлғайды» — артты, көбейді деген мағына береді.','Мәтінде қалам қайраткерлерінің жұмыстары артқаны туралы айтылған.','Сондықтан мағынасы жақын сөз — «көбейді».'],
-['Слово «увеличилось» означает «стало больше, возросло».','В тексте говорится, что объём работы деятелей пера стал больше.','Поэтому правильный вариант — «возросло».']],
+['В тексте говорится, что объём работы деятелей пера стал больше.','Слово «возрос» означает «увеличился, стал больше».','Поэтому правильный ответ — «увеличился».']],
 [20,'<span class="kk">Берілген мәтіннің мақсатын анықтаңыз.</span><span class="ru">Определите цель данного текста.</span>',
 [['Әлеуметтік-экономикалық өзгерістерді және оның тілге әсерін көрсету','Показать социально-экономические изменения и их влияние на язык'],['Оқу-білім мәселесін БАҚ арқылы көрсету','Показать развитие образования через средства массовой информации'],['Тілді дәуірлеу қағидаттарын айқындау','Определить принципы периодизации языка'],['Қалам қайраткерлерінің жұмысын таныту','Рассказать только о деятельности писателей'],['Тіл саясатын жоғары деңгейде көрсету','Описать только языковую политику']],'A',
 ['Мәтін XIX ғасырдағы қоғамдағы өзгерістерді сипаттайды.','Сол өзгерістердің тілдің дамуына қалай әсер еткені түсіндіріледі.','Сондықтан мәтіннің мақсаты — әлеуметтік-экономикалық өзгерістерді және олардың тілге әсерін көрсету.'],
@@ -207,10 +119,10 @@ let A=[
 ['Мәтін тек діни оқу немесе кітап бастыру туралы ғана емес.','Негізгі ой — қоғамдағы өзгерістердің тілге ықпалы.','Сондықтан ең дәл тақырып — «Тіл мен қоғам ықпалдастығы».'],
 ['Текст не ограничивается религиозным обучением или книгоизданием.','Главное содержание — связь общественных изменений и развития языка.','Поэтому наиболее точная тема — «Взаимодействие языка и общества».']],
 ['TEXT2',T2,R2],
-[22,'<span class="kk">«Ақырғы» сөзіне мағынасы жақын сөзді табыңыз.</span><span class="ru">Найдите слово, близкое по значению к слову «окончательный».</span>',
+[22,'<span class="kk">«Ақырғы» сөзіне мағынасы жақын сөзді табыңыз.</span><span class="ru">Найдите синоним к слову «окончательный».</span>',
 [['соңғы','последний'],['ортаңғы','средний'],['бірінші','первый'],['бастапқы','начальный'],['алғашқы','первоначальный']],'A',
 ['«Ақырғы» — соңғы, ең соңындағы деген мағына береді.','Сондықтан мағынасы жақын сөз — «соңғы».'],
-['Слово «окончательный» означает «последний, завершающий».','Из предложенных вариантов ближе всего слово «последний».']],
+['Слово «окончательный» означает «последний, завершающий».','Из предложенных вариантов ближе всего по смыслу слово «последний».','Поэтому правильный ответ — «последний».']],
 [23,'<span class="kk">Берілген мәтінге сәйкес тақырыпты таңдаңыз.</span><span class="ru">Выберите тему, соответствующую тексту.</span>',
 [['Дәл ғылымдар','Точные науки'],['Жаратылыс','Природа'],['Жаратылыс заңы','Закон природы'],['Ғалымдар','Учёные'],['Зерттелім','Исследование']],'A',
 ['Мәтінде жаратылыстанудың дәл ғылымдар қатарына жататыны айтылады.','Негізгі мазмұн нақты білім, формула және ғылыми дәлдік туралы.','Сондықтан дұрыс тақырып — «Дәл ғылымдар».'],
@@ -221,17 +133,17 @@ let A=[
 ['Текст объясняет значение естествознания и его общий научный характер.','Он не перечисляет достижения и не даёт подробную историю возникновения науки.','Поэтому цель текста — дать представление о естествознании.']],
 ['TEXT3',T3,R3],
 [25,'<span class="kk">Берілген мәтінге сәйкес тақырыпты таңдаңыз.</span><span class="ru">Выберите тему, соответствующую тексту.</span>',
-[['Тұсау кесу','Обряд разрезания пут'],['Өмір салты','Образ жизни'],['Дәстүр','Традиция'],['Той','Праздник'],['Шашу','Праздничное угощение']],'A',
+[['Тұсау кесу','Первые самостоятельные шаги ребёнка'],['Өмір салты','Школьные достижения'],['Дәстүр','Спортивное соревнование'],['Той','Профессиональный праздник'],['Шашу','Городская прогулка']],'A',
 ['Мәтін нақты тұсау кесу дәстүрінің қалай орындалатынын сипаттайды.','«Дәстүр» жалпы атау, ал мәтіннің нақты тақырыбы — тұсау кесу.','Сондықтан дұрыс жауап — «Тұсау кесу».'],
-['Текст подробно описывает конкретный детский обряд: когда он проводится, что означает нить и как проходит действие.','Слово «традиция» слишком общее, а текст посвящён именно обряду разрезания пут.','Поэтому правильная тема — «Обряд разрезания пут».']],
+['Русский текст рассказывает о том, как семья поддерживает ребёнка, когда он начинает самостоятельно ходить.','Главная тема текста — первые самостоятельные шаги ребёнка и семейная поддержка.','Поэтому правильный ответ — «Первые самостоятельные шаги ребёнка».']],
 [26,'<span class="kk">Мәтіннің мақсатын анықтаңыз.</span><span class="ru">Определите цель текста.</span>',
 [['ақпарат беру','информирование'],['талдау','анализ'],['салыстыру','сравнение'],['зерттеу','исследование'],['пікір білдіру','выражение мнения']],'A',
 ['Мәтін дәстүр туралы мәлімет береді.','Онда салыстыру, зерттеу немесе авторлық пікір жоқ.','Сондықтан мәтіннің мақсаты — ақпарат беру.'],
-['Текст сообщает сведения об обряде и объясняет порядок его проведения.','В нём нет сравнения, исследования или выражения личной позиции автора.','Поэтому цель текста — информирование.']],
-[27,'<span class="kk">«Тұсау» сөзіне мағынасы жақын сөзді табыңыз.</span><span class="ru">Найдите слово, близкое по смыслу к слову «путы».</span>',
-[['байлау','связывание'],['тағу','надевание'],['кесу','разрезание'],['шешу','развязывание'],['орау','обматывание']],'A',
+['Текст сообщает информацию о семейном событии и объясняет его смысл.','В нём нет сравнения, исследования или авторского спора.','Поэтому цель текста — информирование.']],
+[27,'<span class="kk">«Тұсау» сөзіне мағынасы жақын сөзді табыңыз.</span><span class="ru">Найдите слово, близкое по смыслу к слову «поддержка».</span>',
+[['байлау','помощь'],['тағу','украшение'],['кесу','разделение'],['шешу','отказ'],['орау','упаковка']],'A',
 ['«Тұсау» — аяққа салынатын байлау, қозғалысты шектеу мағынасындағы сөз.','Сондықтан мағынасы жақын сөз — «байлау».'],
-['Слово «путы» означает связывание, ограничение движения.','Из предложенных вариантов ближе всего слово «связывание».']],
+['В русском тексте слово «поддержка» означает помощь, заботу и участие близких.','Из предложенных вариантов ближе всего по смыслу слово «помощь».']],
 ['TEXT4',T4,R4],
 [28,'<span class="kk">Ойды жалғастырыңыз: Болатты суару мен жасыту...</span><span class="ru">Продолжите мысль: Закалка и отпуск стали...</span>',
 [['құрылымын жақсарту үшін қажет','нужны для улучшения структуры'],['оны пайдалану үшін қажет','нужны для использования стали'],['жинау үшін қажет','нужны для сборки'],['жұмыс үшін қажет','нужны для выполнения работы'],['оны сындыру үшін қажет','нужны для разрушения стали']],'A',
@@ -241,10 +153,10 @@ let A=[
 [['болатты суытқанда, ол жасиды','при постепенном охлаждении сталь становится мягче'],['болаттың ерекше қасиеті бар','сталь всегда обладает только особыми свойствами'],['болат — қара металлургияның негізгі өнімі','сталь названа основным продуктом чёрной металлургии'],['болат өндірісі экономикалық деңгейін анықтайды','производство стали определяет экономический уровень'],['болат көміртектен және басқа элементтерден тұрады','сталь состоит из углерода и других элементов']],'A',
 ['Мәтінде суарған болатты қайта қыздырып, біртіндеп суытқанда болат жұмсарып, жаситыны айтылған.','Осы ақпарат бірінші нұсқамен сәйкес келеді.'],
 ['В тексте сказано, что после повторного нагрева и постепенного охлаждения сталь становится мягче.','Именно эта информация передана в первом варианте.']],
-[30,'<span class="kk">«Жұмсақ» сөзіне мағынасы жақын сөзді табыңыз.</span><span class="ru">Найдите слово, близкое по значению к слову «мягкий».</span>',
-[['үлпілдек','мягкий, пушистый'],['сынғыш','хрупкий'],['иілгіш','гибкий'],['ашық','открытый'],['тығыз','плотный']],'A',
+[30,'<span class="kk">«Жұмсақ» сөзіне мағынасы жақын сөзді табыңыз.</span><span class="ru">Найдите синоним к слову «мягкий».</span>',
+[['үлпілдек','пушистый'],['сынғыш','хрупкий'],['иілгіш','гибкий'],['ашық','открытый'],['тығыз','плотный']],'A',
 ['«Жұмсақ» — қатты емес, нәзік, босаң деген мағына береді.','Берілген нұсқалардың ішіндегі ең жақыны — «үлпілдек».'],
-['Слово «мягкий» означает «не твёрдый, нежный».','Из предложенных вариантов ближе всего значение «мягкий, пушистый».']]
+['Слово «мягкий» означает «не твёрдый, нежный».','Из предложенных вариантов ближе всего по смыслу слово «пушистый».']]
 ];document.getElementById('analyticalQs').innerHTML=A.map(x=>x[0]==='TEXT1'||x[0]==='TEXT2'||x[0]==='TEXT3'||x[0]==='TEXT4'?textBlock(x[1],x[2]):q('a',...x)).join('');
 
 function renderEnglish(){
@@ -380,40 +292,7 @@ document.getElementById('englishBlock').innerHTML=html
 }
 renderEnglish();
 </script>
-
-
-
-<script id="static-final-language-script">
-(function(){
-  function applyLang(lang){
-    var isRu = lang === 'ru';
-    document.body.classList.toggle('rus', isRu);
-    document.documentElement.lang = isRu ? 'ru' : 'kk';
-    document.querySelectorAll('.lang button').forEach(function(b){
-      var active = b.getAttribute('data-lang') === lang || 
-                   (lang === 'kk' && b.textContent.trim().toUpperCase() === 'KZ') ||
-                   (lang === 'ru' && b.textContent.trim().toUpperCase() === 'RU');
-      b.classList.toggle('active', active);
-      b.classList.toggle('on', active);
-    });
-  }
-  window.lang = function(lang){applyLang(lang)};
-  window.setLang = function(lang){applyLang(lang === 'rus' ? 'ru' : lang)};
-  window.setLanguage = function(lang){applyLang(lang === 'rus' ? 'ru' : lang)};
-  document.addEventListener('DOMContentLoaded', function(){
-    document.querySelectorAll('.lang button').forEach(function(b){
-      if(!b.getAttribute('data-lang')){
-        b.setAttribute('data-lang', b.textContent.trim().toUpperCase() === 'RU' ? 'ru' : 'kk');
-      }
-      b.onclick = function(){applyLang(b.getAttribute('data-lang'))};
-    });
-    applyLang('kk');
-  });
-})();
-</script>
-
-
-<script id="FINAL_STATIC_LANG">
+<script id="FINAL_BILINGUAL_LANGUAGE">
 (function(){
   function applyLang(lang){
     var isRu = lang === 'ru';
